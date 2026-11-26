@@ -121,6 +121,40 @@ html.help-is-open{overflow:hidden}.help-dialog{padding:0;border:1px solid #e7dce
 @media(max-width:1000px){.scenario-layout{grid-template-columns:1fr;gap:20px}.scenario-inputs{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.scenario-value-field{margin:0}.scenario-inputs>.scenario-note,.scenario-presets,.scenario-error{grid-column:1/-1}}
 @media(max-width:760px){.scenario-inputs{padding:17px;grid-template-columns:1fr;gap:0}.scenario-value-field{margin-top:15px}.scenario-cards{gap:10px}.scenario-card{padding:15px 12px}.scenario-card h3{font-size:16px}.scenario-rank{font-size:42px}.scenario-score-line{min-height:4.5em}.scenario-chart{min-width:560px}.scenario-chart .tick,.scenario-chart .axis{font-size:16px}}
 @media print{.scenario-layout{grid-template-columns:1fr}.scenario-inputs{display:none}.scenario-chart-scroll{overflow:visible}.scenario-chart{min-width:0}}
+
+/* Local review draft: observed ranking first, model controls afterwards. */
+.dashboard{padding-top:18px}
+.topline{padding-bottom:12px}
+.snapshot-bar{margin-top:0;margin-bottom:0;padding:0;min-height:46px}
+.snapshot-status{margin:6px 0 0;font-size:13px}
+#mytri-field{margin-top:17px}
+#field-title{font-size:clamp(26px,2.5vw,35px);line-height:1.18;letter-spacing:-.035em;font-weight:700}
+#mytri-field .section-head{gap:20px;align-items:flex-start}
+#mytri-field .section-head p{max-width:820px;font-size:16px;line-height:1.6;margin-top:10px}
+#mytri-field .meta{margin-top:3px}
+.field-next-step{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.field-next-step a{background:var(--primary);color:white;border-color:var(--primary);text-decoration:none;white-space:nowrap}
+.field-next-step a:hover{background:#65091d}
+.field-next-step span{font-size:14px;color:var(--muted)}
+.field-next-step a span{color:inherit;margin-left:10px;font-size:18px}
+.model-opening{margin-top:38px;margin-bottom:20px}
+.model-opening p{color:var(--muted);font-size:16px;margin-top:10px;max-width:960px}
+.dashboard>.actuals{margin:0 0 20px}
+@media(max-width:760px){.dashboard{padding-top:14px}.topline{font-size:12px}.snapshot-bar{margin-top:0}#mytri-field{margin-top:16px}#field-title{font-size:27px}#mytri-field .section-head p{font-size:15px}.field-next-step{align-items:flex-start;flex-direction:column}.model-opening{margin-top:29px}.model-opening h2{font-size:25px}}
+
+.field-band-switch{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;margin:0 0 0 auto;cursor:pointer;color:var(--ink)}.field-band-switch input{width:17px;height:17px;accent-color:var(--primary);margin:0}
+.field-coverage-note{margin:12px 0 0;font-size:14px;line-height:1.55;color:var(--muted)}
+.field-target-live{display:flex;flex-wrap:wrap;align-items:center;gap:5px 19px;margin-top:13px;padding:8px 12px;background:#edf7f9;border-radius:7px;font-size:14px;line-height:1.5;color:#205a67}.field-target-live span:first-child{font-weight:650}.field-target-live span+span{border-left:1px solid #b8d5dc;padding-left:19px}
+.field-target-panel{margin:20px 0 22px;padding:21px;border:1px solid #bddfe7;border-left:4px solid #286b7a;border-radius:12px;background:#f2fafb;display:grid;grid-template-columns:minmax(230px,1fr) minmax(230px,1.2fr);gap:13px 25px}
+.field-target-entry{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.field-target-entry label{flex:0 0 100%;margin:0;font-size:15px}.field-target-entry input{width:105px;border:1px solid #a9cbd3;border-radius:7px;padding:8px 12px;background:white;font-size:23px;line-height:1.4;color:var(--ink)}.field-target-entry input[aria-invalid=true]{border-color:var(--primary)}
+.field-target-answer{display:flex;flex-direction:column;justify-content:center;gap:4px;font-size:16px;line-height:1.5}.field-target-answer strong{font-size:22px;color:#205a67;font-weight:650}.field-target-answer span:last-child{font-size:14px;color:var(--muted)}
+.field-explorer-note,.field-target-error,.field-explorer-warning,.field-explorer-links{grid-column:1/-1;font-size:14px;line-height:1.6;margin:0;color:var(--muted)}.field-target-error{color:var(--primary)}.field-explorer-warning{border-top:1px solid #bddfe7;padding-top:12px;color:var(--primary)}.field-explorer-links{display:flex;flex-wrap:wrap;gap:10px 24px}
+.field-quartile-summary{margin:20px 0;font-size:14px;color:var(--muted);line-height:1.6}.field-quartile-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}.field-quartile-values>span{padding:13px 15px;border:1px solid var(--line);border-radius:9px;background:#faf6f8}.field-quartile-values>span:nth-child(2){background:#fce8ef}.field-quartile-values b{display:block;font-size:19px;font-weight:600;color:var(--ink);margin-top:3px}.field-quartile-summary details{margin-top:15px;padding-top:12px}.field-quartile-summary summary{font-size:14px}
+.field-plot .tick{font-size:15px}.field-plot .axis{font-size:15px}
+.field-plot .field-drag-handle{cursor:ew-resize;touch-action:none;user-select:none}.field-plot .field-drag-handle:focus{outline:none}.field-plot .field-drag-handle:focus .field-handle-pill{stroke:#181b21;stroke-width:3}.field-plot .quartile-label{font-size:14px;fill:#765767}.field-plot .field-target-label{font-size:13px;font-weight:650;fill:white}.field-plot .field-target-guide{stroke:#286b7a;stroke-width:2;stroke-dasharray:6 4}
+@media(max-width:760px){.field-band-switch{margin-left:0}.field-target-live{gap:4px 12px}.field-target-live span+span{border:0;padding-left:0}.field-target-live span:last-child{flex-basis:100%}.field-target-panel{grid-template-columns:minmax(0,1fr);padding:17px;gap:16px}.field-target-entry input{width:95px}.field-target-answer{border-top:1px solid #bddfe7;padding-top:13px}.field-quartile-values{gap:7px}.field-quartile-values>span{padding:10px 8px;font-size:13px}.field-quartile-values b{font-size:15px}.field-plot .quartile-label{font-size:10px}.field-plot .field-target-label{font-size:12px}}
+@media print{.field-target-entry input,.field-target-entry button,.field-band-switch,.field-explorer-links{display:none}.field-target-panel{break-inside:avoid}.field-quartile-summary{break-inside:avoid}}
+
 </style>
 <aside class="sidebar" aria-label="Dashboard navigation">
 <div class="side-brand">
@@ -134,16 +168,14 @@ Sofya.
 Triathlon explorer
 </div>
 </div>
-<nav class="section-nav" aria-label="Dashboard sections">
-<a href="#estimate" aria-current="location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V13M10 19V5M16 19V9M22 19V3" /></svg><span>Distribution</span></a><a href="#simulator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 18h16M6 15l5-5 4 2 5-8M15 4h5v5" /></svg><span>What-if
+<nav class="section-nav" aria-label="Dashboard sections"><a aria-current="location" href="#mytri-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18M3 19V5" /><circle cx="7" cy="8" r="1.5"></circle><circle cx="12" cy="11" r="1.5"></circle><circle cx="17" cy="14" r="1.5"></circle><circle cx="21" cy="15" r="1.5"></circle></svg><span>MyTriRanking
+field</span></a><a href="#estimate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V13M10 19V5M16 19V9M22 19V3" /></svg><span>Distribution</span></a><a href="#simulator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 18h16M6 15l5-5 4 2 5-8M15 4h5v5" /></svg><span>What-if
 simulator</span></a><a href="#history"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 4v16h17M6 16l5-5 4 2 5-8" /><circle cx="11" cy="11" r="2"></circle></svg><span>Progress
 over
-time</span></a><a href="#mytri-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18M3 19V5" /><circle cx="7" cy="8" r="1.5"></circle><circle cx="12" cy="11" r="1.5"></circle><circle cx="17" cy="14" r="1.5"></circle><circle cx="21" cy="15" r="1.5"></circle></svg><span>MyTriRanking
-field</span></a><a href="#athletes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"></circle><path d="M3 20v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 4v2" /></svg><span>Athlete
+time</span></a><a href="#athletes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"></circle><path d="M3 20v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 4v2" /></svg><span>Athlete
 comparison</span></a><a href="#methods"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /><circle cx="9" cy="6" r="2" fill="currentColor"></circle><circle cx="16" cy="12" r="2" fill="currentColor"></circle><circle cx="11" cy="18" r="2" fill="currentColor"></circle></svg><span>Compare
 methods</span></a><a href="#uncertainty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7v1" /></svg><span>Understand
-the intervals</span></a>
-</nav>
+the intervals</span></a></nav>
 <div class="sidebar-bottom">
 <svg class="side-art" viewBox="0 0 150 100" aria-hidden="true">
 <path fill="#c9edf1" d="M0 0h150v100H0z" /><path fill="#d82046" d="M0 0h50v50H0z" /><circle fill="#f3a0bd" cx="25" cy="25" r="17"></circle><circle fill="white" cx="25" cy="25" r="7"></circle><path fill="#f3a0bd" d="m50 0 50 50H50zm50 0 50 50h-50zM0 50h50v50H0z" /><path fill="#850e25" d="M0 50a50 50 0 0 1 50 50H0z" /><path fill="#ef658e" d="M50 50h100v50H50z" /><path fill="#f3a0bd" d="m50 100 50-50v50zm50 0 50-50v50z" />
@@ -159,12 +191,10 @@ study</span></small>
 </aside>
 <main class="dashboard" id="app" data-design="classic">
 
-<div class="topline">
-<strong>Performance dashboard</strong><span id="download-date"></span>
-</div>
+<span class="sr-only" id="download-date"></span>
 <div class="snapshot-bar">
 <div class="snapshot-picker field">
-<label for="snapshot-date">Viewing saved download</label>
+<label for="snapshot-date">Data downloaded</label>
 <div class="select-wrap">
 <select id="snapshot-date" aria-describedby="snapshot-status"></select>
 </div>
@@ -172,32 +202,91 @@ study</span></small>
 </div>
 <a href="#history">Explore your history</a>
 </div>
-<p class="snapshot-status" id="snapshot-status" role="status">
+<p class="snapshot-status sr-only" id="snapshot-status" role="status">
 </p>
-<header class="heading">
-<div class="hero-intro">
+<section class="primary-block" id="mytri-field" aria-labelledby="field-title">
+<div class="section-head">
 <div>
-<h1>
-Where might I rank?
-</h1>
-<p>
-A picture of the possibilities, the athletes behind them, and how much
-the assumptions matter.
+<h1 id="field-title">
+Where you sit in MyTriRanking
+</h1><p id="field-opening-summary"></p>
+</div>
+<span id="field-scope-label" class="meta"></span>
+</div>
+<div class="field-controls">
+<div class="field range-choice">
+<label for="field-range">Zoom to</label>
+<div class="select-wrap">
+<select id="field-range" aria-describedby="field-coverage-note"><option value="100">Top 100</option><option value="125" selected>Top 125</option><option value="200">Top 200</option><option value="1000">Top 1,000</option><option value="near">Near my rank (±40)</option><option value="all">All saved UK women</option></select>
+</div>
+</div>
+<div class="field athlete-choice">
+<label for="field-athlete">Find an athlete</label>
+<div class="select-wrap">
+<select id="field-athlete"></select>
+</div>
+</div>
+<button class="button" type="button" id="field-find-me">
+Highlight me
+</button>
+<button class="button field-download" type="button" id="field-download">
+Download this field
+</button>
+</div>
+<p id="field-coverage-note" class="field-coverage-note"></p><div class="field-legend" aria-label="Athlete categories">
+<span class="key"><i class="swatch"></i> Pro-ranking match
+<b id="field-count-matched"></b></span><span class="key"><i class="swatch unmatched"></i> No pro-list match
+<b id="field-count-unmatched"></b></span><span class="key"><i class="swatch ambiguous"></i> Ambiguous name
+<b id="field-count-ambiguous"></b></span><span class="key"><i class="swatch user"></i> You
+<b id="field-count-self"></b></span>
+<label class="field-band-switch"><input id="field-show-quartiles" type="checkbox" checked>Show pro-score quartiles</label></div>
+<div class="field-target-live" aria-label="Live hypothetical target"><span id="field-live-rank"></span><span id="field-live-score"></span><span id="field-live-world"></span></div><div class="field-plot-wrap">
+<div class="field-plot-scroll" aria-label="MyTriRanking score plot">
+<svg id="field-plot" class="chart field-plot" viewBox="0 0 1100 420" role="group" aria-labelledby="field-desc">
+<title id="field-desc">
+</title>
+</svg>
+</div>
+<div id="field-tip" class="tooltip" hidden>
+
+</div>
+</div>
+<div class="field-target-panel" aria-label="Hypothetical position">
+<div class="field-target-entry"><label for="field-target-rank">Hypothetical UK rank</label><input type="number" id="field-target-rank" min="1" step="1" value="50" inputmode="numeric" aria-describedby="field-target-instructions field-target-error"><button class="button" type="button" id="field-target-reset">Use my current rank</button></div>
+<div class="field-target-answer" aria-live="polite" aria-atomic="true"><strong id="field-target-score"></strong><span id="field-target-world"></span><span id="field-target-interval"></span></div>
+<p id="field-target-error" class="field-target-error" role="status" hidden></p>
+<p id="field-target-instructions" class="field-explorer-note">Drag the teal line left or right, or type any UK rank here. With the handle focused, use the arrow keys for one place or Page Up / Page Down for ten. Your actual position stays in crimson.</p>
+<p id="field-target-model" class="field-explorer-note"></p>
+<p id="field-target-warning" class="field-explorer-warning" hidden></p>
+<div class="field-explorer-links"><a href="#simulator">Full scenario comparison and uncertainty</a><a href="#model-settings">Change model settings</a></div>
+</div>
+<div class="field-quartile-summary" id="field-quartile-summary">
+<p id="field-quartile-context"></p>
+<div class="field-quartile-values"><span>Lower 25% <b id="field-quartile-low"></b></span><span>Middle 50% <b id="field-quartile-middle"></b></span><span>Upper 25% <b id="field-quartile-high"></b></span></div>
+<details><summary>What do these score bands mean?</summary><div class="details-content"><p>These quartiles describe <strong>MyTriRanking overall scores</strong> among all British women uniquely matched to either saved PTO or OpenRank list. Each athlete counts once; ambiguous names are excluded. The group stays the same when you zoom the chart or change the prediction model.</p><p>The shaded band contains the middle half of this group’s score distribution, between the 25th and 75th percentiles. The median divides it in half. Higher scores are better. Percentiles are interpolated between ordered scores, so boundaries need not equal an athlete’s exact score.</p><p>These are descriptive benchmarks for this British comparison group. They are neither professional eligibility thresholds nor worldwide professional ranking bands.</p></div></details>
+</div>
+
+<div id="field-neighbours" class="field-neighbours" aria-label="Nearest pro-ranking matches by MyTriRanking score">
+
+</div>
+<p class="field-context-note">
+These are the closest uniquely matched athletes above and below your
+overall score in the supplied British list. The gaps are observed
+MyTriRanking points, not predictions of race time or pro rank.
 </p>
+<div id="field-detail" class="field-selected" aria-live="polite">
+
 </div>
-<svg class="hero-art" viewBox="0 0 420 140" aria-hidden="true">
-<path fill="#850e25" d="M0 0h420v140H0z" /><path fill="#d82046" d="m0 0 70 70-70 70zm70 0 70 70-70 70z" /><path fill="#ef658e" d="m140 0 70 70-70 70z" /><path fill="#f3a0bd" d="M210 0h140v140H210z" /><circle fill="#c9edf1" cx="280" cy="70" r="70"></circle><circle fill="white" cx="280" cy="70" r="28"></circle><path fill="#c9edf1" d="M350 0h70v140h-70z" /><path fill="#ef658e" d="M364 0h14v140h-14zm28 0h14v140h-14z" />
-</svg>
-<svg class="poster-emblem" viewBox="0 0 280 240" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-<path d="M108 80C74 63 57 35 18 25c9 17 23 33 42 45-25-8-33-11-45-9 17 19 36 33 61 43-31-4-41 0-51 5 24 13 42 18 65 20M172 80c34-17 51-45 90-55-9 17-23 33-42 45 25-8 33-11 45-9-17 19-36 33-61 43 31-4 41 0 51 5-24 13-42 18-65 20" fill="#f4bfd6" stroke-width="2" />
-<path d="M101 86C76 66 54 45 29 32m70 65L28 68m69 39-59 3m141-24c25-20 47-41 72-54m-70 65 71-29m-69 39 59 3" />
-<circle cx="140" cy="123" r="57" stroke-width="3"></circle><circle cx="140" cy="123" r="50" stroke-width="1"></circle><path d="M140 123L189.0 123.0" /><path d="M140 123L182.4 147.5" /><path d="M140 123L164.5 165.4" /><path d="M140 123L140.0 172.0" /><path d="M140 123L115.5 165.4" /><path d="M140 123L97.6 147.5" /><path d="M140 123L91.0 123.0" /><path d="M140 123L97.6 98.5" /><path d="M140 123L115.5 80.6" /><path d="M140 123L140.0 74.0" /><path d="M140 123L164.5 80.6" /><path d="M140 123L182.4 98.5" /><circle cx="140" cy="123" r="11" fill="#f1adca" stroke-width="2"></circle><circle cx="140" cy="123" r="4" fill="currentColor"></circle>
-<path d="m140 29 4 12 12 4-12 4-4 12-4-12-12-4 12-4zM35 144l3 8 8 3-8 3-3 8-3-8-8-3 8-3zm211-6 3 10 10 3-10 3-3 10-3-10-10-3 10-3z" fill="currentColor" stroke="none" />
-<path d="M61 180q19-15 40 0t40 0 40 0 40 0M56 190q21-15 43 0t43 0 43 0 43 0M63 200q19-13 39 0t39 0 39 0 39 0" stroke-width="2" />
-<path d="M91 212q49 19 98 0m-88 7q39 14 78 0M57 24l-2-9m5 9 5-8m-3 12 10-3m150-1 2-9m-5 9-5-8m3 12-10-3" />
-</svg>
-</div>
-<div class="actuals">
+<p class="field-note">
+<strong>How to read the colours:</strong> burgundy means a unique name
+match in the saved PTO or OpenRank lists. Pale aqua means no match, not
+confirmed amateur status. Pink diamonds mark duplicate names we cannot
+safely assign. You are highlighted separately in crimson. These are the
+supplied British rankings, not the worldwide MyTriRanking field; this
+section is independent of the model controls above.
+</p>
+<div class="field-next-step"><a class="button" href="#simulator">Try a target UK rank <span aria-hidden="true">→</span></a><span>See how another rank or score changes the provisional world estimate.</span></div></section>
+<div class="model-opening" id="model-settings"><h2>What could this mean for your world ranking?</h2><p>Choose the comparison data and assumptions, then explore the estimate or try a target UK rank in the simulator.</p></div><div class="actuals">
 <div class="kpi-rank">
 <span class="kpi-label">British
 rank</span><b id="actual-british"></b><small class="kpi-caption">Women ·
@@ -219,7 +308,7 @@ in this
 model</button></span><b id="overview-n"></b><small class="kpi-caption" id="overview-cohort"></small>
 </div>
 </div>
-</header>
+
 <div class="control-area">
 <div class="control-heading">
 <span class="eyebrow">Choose your scenario</span><span class="small">Every chart updates with your choices</span>
@@ -697,82 +786,7 @@ snapshot’s available ranking dates.
 </div>
 </details>
 </section>
-<section class="primary-block" id="mytri-field" aria-labelledby="field-title">
-<div class="section-head">
-<div>
-<h2 id="field-title">
-Where you sit in MyTriRanking
-</h2>
-<p>
-British women · middle distance. See the whole ranking curve, or choose
-“Near my rank” to compare score gaps around you. Select any dot for
-athlete details.
-</p>
-</div>
-<span id="field-scope-label" class="meta"></span>
-</div>
-<div class="field-controls">
-<div class="field range-choice">
-<label for="field-range">Show the field</label>
-<div class="select-wrap">
-<select id="field-range"><option value="100">Top
-100</option><option value="150" selected>Top
-150</option><option value="near">Near my rank
-(±40)</option><option value="all">All athletes in the
-file</option></select>
-</div>
-</div>
-<div class="field athlete-choice">
-<label for="field-athlete">Find an athlete</label>
-<div class="select-wrap">
-<select id="field-athlete"></select>
-</div>
-</div>
-<button class="button" type="button" id="field-find-me">
-Highlight me
-</button>
-<button class="button field-download" type="button" id="field-download">
-Download this field
-</button>
-</div>
-<div class="field-legend" aria-label="Athlete categories">
-<span class="key"><i class="swatch"></i> Pro-ranking match
-<b id="field-count-matched"></b></span><span class="key"><i class="swatch unmatched"></i> Not matched
-<b id="field-count-unmatched"></b></span><span class="key"><i class="swatch ambiguous"></i> Ambiguous name
-<b id="field-count-ambiguous"></b></span><span class="key"><i class="swatch user"></i> You
-<b id="field-count-self"></b></span>
-</div>
-<div class="field-plot-wrap">
-<div class="field-plot-scroll" aria-label="MyTriRanking score plot">
-<svg id="field-plot" class="chart field-plot" viewBox="0 0 1100 420" role="group" aria-labelledby="field-desc">
-<title id="field-desc">
-</title>
-</svg>
-</div>
-<div id="field-tip" class="tooltip" hidden>
 
-</div>
-</div>
-<div id="field-neighbours" class="field-neighbours" aria-label="Nearest pro-ranking matches by MyTriRanking score">
-
-</div>
-<p class="field-context-note">
-These are the closest uniquely matched athletes above and below your
-overall score in the supplied British list. The gaps are observed
-MyTriRanking points, not predictions of race time or pro rank.
-</p>
-<div id="field-detail" class="field-selected" aria-live="polite">
-
-</div>
-<p class="field-note">
-<strong>How to read the colours:</strong> burgundy means a unique name
-match in the saved PTO or OpenRank lists. Pale aqua means no match, not
-confirmed amateur status. Pink diamonds mark duplicate names we cannot
-safely assign. You are highlighted separately in crimson. These are the
-supplied British rankings, not the worldwide MyTriRanking field; this
-section is independent of the model controls above.
-</p>
-</section>
 <section class="primary-block" id="athletes" aria-labelledby="scatter-title">
 <div class="section-head">
 <div>
@@ -1289,13 +1303,16 @@ const fieldMe=()=>D.fieldAthletes.find(a=>a.isUser);
 const fieldRows=()=>{const range=$('field-range').value,me=fieldMe();return D.fieldAthletes.filter(a=>range==='near'?Math.abs(a.british-me.british)<=40:range==='all'||a.british<=Number(range))};
 function chooseFieldAthlete(id){fieldSelected=id;hideTip('field-tip');drawField()}
 function drawField(){
+ $('field-opening-summary').textContent=`British women · middle distance. You’re #${D.user.british} with ${fmt(D.user.overall)} points. Drag the teal line to try another rank; select dots for athlete details.`;
+
  const rows=fieldRows(),el=$('field-plot'),N=rows.length,me=fieldMe(),near=$('field-range').value==='near';clearChart(el);
  if(!rows.some(a=>a.id===fieldSelected))fieldSelected=(rows.find(a=>a.isUser)||rows[0]).id;
- const active=rows.find(a=>a.id===fieldSelected),W=Math.max(300,el.parentElement.clientWidth),compact=W<600,L=compact?48:65,R=W-20,T=43,B=compact?270:340,H=B+64,rankMin=rows[0].british,rankMax=rows[rows.length-1].british,roundTo=near?5:20,pad=near?5:12,minScore=Math.floor((Math.min(...rows.map(a=>a.overall))-pad)/roundTo)*roundTo,maxScore=Math.ceil((Math.max(...rows.map(a=>a.overall))+pad)/roundTo)*roundTo;
+ const active=rows.find(a=>a.id===fieldSelected),W=Math.max(300,el.parentElement.clientWidth),compact=W<600,L=compact?48:65,R=W-20,T=43,B=compact?330:440,H=B+64,rankMin=rows[0].british,rankMax=rows[rows.length-1].british,roundTo=near?5:20,pad=near?5:12,minScore=Math.floor((Math.min(...rows.map(a=>a.overall))-pad)/roundTo)*roundTo,maxScore=Math.ceil((Math.max(...rows.map(a=>a.overall))+pad)/roundTo)*roundTo;
  el.setAttribute('viewBox',`0 0 ${W} ${H}`);
  const X=r=>L+(r-rankMin)/Math.max(1,rankMax-rankMin)*(R-L),Y=v=>B-(v-minScore)/(maxScore-minScore)*(B-T),counts={matched:0,unmatched:0,ambiguous:0,self:0};rows.forEach(a=>counts[fieldCategory(a)]++);
+ fieldGeometry={el,rows,W,L,R,T,B,H,rankMin,rankMax,minScore,maxScore,X,Y};drawFieldScoreBands(fieldGeometry);
  Object.entries(counts).forEach(([key,n])=>$('field-count-'+key).textContent=n);
- $('field-scope-label').textContent=`${near?'Ranks '+rankMin+'–'+rankMax:'Top '+rows.length.toLocaleString()} · your rank ${me.british} of ${D.fieldAthletes.length.toLocaleString()}`;
+ $('field-scope-label').textContent=`${near?'Ranks '+rankMin+'–'+rankMax:$('field-range').value==='all'?'All '+rows.length.toLocaleString()+' saved':'Top '+rows.length.toLocaleString()} · your rank ${me.british} of ${D.fieldAthletes.length.toLocaleString()}`;
  const span=maxScore-minScore,step=span<=50?10:span<=100?20:span<=300?50:100;for(let score=Math.ceil(minScore/step)*step;score<=maxScore;score+=step){el.append(svg('line',{x1:L,y1:Y(score),x2:R,y2:Y(score),stroke:'#e7e1e6'}),svg('text',{x:L-12,y:Y(score)+5,'text-anchor':'end',class:'tick'},score))}
  const tickStep=[1,2,5,10,25,50,100,200,250,500,1000,2000].find(n=>n>=(rankMax-rankMin)/(compact?3:6))||Math.ceil((rankMax-rankMin)/4),rankTicks=near?[rankMin,me.british,rankMax]:[rankMin,...Array.from({length:Math.floor(rankMax/tickStep)},(_,i)=>(i+1)*tickStep).filter(r=>r>rankMin&&r<rankMax),rankMax];[...new Set(rankTicks)].forEach(r=>el.append(svg('text',{x:X(r),y:B+26,'text-anchor':r===rankMin?'start':r===rankMax?'end':'middle',class:'tick'},r.toLocaleString())));
  el.append(svg('text',{x:L,y:20,class:'axis'},compact?'Overall score · higher is better':'MyTriRanking overall score · higher is better'),svg('text',{x:(L+R)/2,y:H-12,'text-anchor':'middle',class:'axis'},compact?'British rank · lower is better':'British middle-distance rank · lower is better'));
@@ -1315,7 +1332,7 @@ function drawField(){
  if(rows.some(a=>a.isUser))annotate(me,`You · #${me.british} · ${fmt(me.overall)}`,true);if(!active.isUser)annotate(active,active.name,false);
  $('field-desc').textContent=`Scores for British ranks ${rankMin} to ${rankMax} in MyTriRanking middle distance. ${counts.matched} pro-ranking name matches, ${counts.unmatched} not matched, ${counts.ambiguous} ambiguous names${counts.self?", and you":"; your position is outside this view"}. Your rank is ${me.british} with ${fmt(me.overall)} points. Click a dot or use the athlete dropdown.`;
  drawFieldNeighbours();
- const picker=$('field-athlete');picker.replaceChildren();rows.forEach(a=>{const o=document.createElement('option');o.value=a.id;o.textContent=`${a.british}. ${a.name}${a.isUser?' · you':''}`;picker.append(o)});picker.value=fieldSelected;showFieldAthlete(active);
+ const picker=$('field-athlete');picker.replaceChildren();rows.forEach(a=>{const o=document.createElement('option');o.value=a.id;o.textContent=`${a.british}. ${a.name}${a.isUser?' · you':''}`;picker.append(o)});picker.value=fieldSelected;showFieldAthlete(active);mountFieldTarget(fieldGeometry);
 }
 function drawFieldNeighbours(){
  const node=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e};
@@ -1352,7 +1369,7 @@ controls.forEach(id=>$(id).addEventListener('change',render));document.querySele
 function download(name,rows){const q=x=>'"'+String(x??'').replaceAll('"','""')+'"';const blob=new Blob(['\ufeff'+rows.map(r=>r.map(q).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'});const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 $('download-athletes').addEventListener('click',()=>{const m=modelNow(),c=config();download(`selected-athletes-${D.date}.csv`,[['name','mytri_overall','mytri_best','british_rank','pto_rank','openrank','pto_points','positive_pto_results','mean_positive_pto_points','displayed_pto_scores','system','basis','cohort','method','measure','finishes'],...D.athletes.filter(a=>m.ids.includes(a.id)).map(a=>[a.name,a.overall,a.best,a.british,a.ptoRank,a.openRank,a.ptoPoints,a.count,a.raceMean,a.scores.join('|'),c.system,c.basis,c.cohort,c.method,c.measure,c.basis==='performance'?c.finishes:'not applicable'])])});
 $('download-models').addEventListener('click',()=>{const c=config();download(`method-comparison-${D.date}.csv`,[['system','basis','measure','cohort','method','finishes','n','median_rank','mean_ci_low','mean_ci_high','prediction_low','prediction_high','bootstrap_draws','note'],...compareRows(c).map(({cfg,m,s})=>[cfg.system,cfg.basis,cfg.measure,cfg.cohort,cfg.method,cfg.basis==='performance'?cfg.finishes:'not applicable',m.n,rankLabel(s.median,cfg),rankLabel(s.meanCI[0],cfg),rankLabel(s.meanCI[1],cfg),rankLabel(s.predictionCI[0],cfg),rankLabel(s.predictionCI[1],cfg),m.replicates,'Exploratory model-based intervals; not validated personal rank probabilities'])])});
-$('reset').addEventListener('click',()=>{Object.entries({system:'pto',basis:'performance',cohort:'near',method:'linear',measure:'overall',finishes:'4'}).forEach(([k,v])=>$(k).value=v);interval='prediction';selected='nataliegreen';$('history-metric').value='overall';$('history-baseline').value='';$('scenario-mode').value='rank';$('scenario-rank').value='50';document.querySelectorAll('[data-interval]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.interval===interval)));render();$('field-range').value='150';fieldSelected=fieldMe().id;if(!fieldRows().some(a=>a.isUser))$('field-range').value='near';drawField()});$('print').addEventListener('click',()=>window.print());
+$('reset').addEventListener('click',()=>{Object.entries({system:'pto',basis:'performance',cohort:'near',method:'linear',measure:'overall',finishes:'4'}).forEach(([k,v])=>$(k).value=v);interval='prediction';selected='nataliegreen';$('history-metric').value='overall';$('history-baseline').value='';$('scenario-mode').value='rank';$('scenario-rank').value='50';document.querySelectorAll('[data-interval]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.interval===interval)));render();$('field-range').value='125';fieldSelected=fieldMe().id;if(!fieldRows().some(a=>a.isUser))$('field-range').value='near';drawField()});$('print').addEventListener('click',()=>window.print());
 const dateLong=value=>new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(value+'T00:00:00Z'));
 const dateShort=value=>new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'2-digit',timeZone:'UTC'}).format(new Date(value+'T00:00:00Z'));
 const historySummaryCache=new Map();
@@ -1363,7 +1380,7 @@ function setSnapshotMetadata(){
  $('download-date').textContent='Data downloaded on '+dateLong(D.date);$('footer-date').textContent='Sofya Lebedeva · viewing '+dateLong(D.date);
  $('actual-british').textContent='#'+D.user.british;$('actual-overall').textContent=fmt(D.user.overall);$('actual-best').textContent=fmt(D.user.best);
  $('measure').options[0].textContent=`Overall score (${fmt(D.user.overall)})`;$('measure').options[1].textContent=`Best-race score (${fmt(D.user.best)})`;
- $('field-range').querySelector('[value="all"]').textContent=`All ${D.fieldAthletes.length.toLocaleString()} in the file`;
+ updateFieldCoverage();
  const rankingDates=D.rankingDates||{pto:[D.rankingDate]},formatDates=dates=>dates?.length?dates.map(dateLong).join(', '):'not supplied in the export';
  $('coverage-dates').textContent=`Selected download: ${dateLong(D.date)}. PTO ranking date: ${formatDates(rankingDates.pto)}. OpenRank ranking date: ${formatDates(rankingDates.openrank)}. These dates are separate from the date the page design was updated. Analysis version ${version(D)}; saved results are retained when this page is rebuilt.`;
  $('coverage-mytri').textContent=`${D.fieldAthletes.length.toLocaleString()} British women in the supplied middle-distance list. Your overall score is ${fmt(D.user.overall)}, best-race score ${fmt(D.user.best)} and British rank ${D.user.british}.`;
@@ -1476,7 +1493,7 @@ function drawScenarioComparison(current,target,c) {
  el.append(svg('text',{x:(L+R)/2,y:202,'text-anchor':'middle',class:'axis'},`${fieldLabel(c)} world rank · lower is better`));
  $('scenario-chart-desc').textContent=`Recorded-score estimate ${rankLabel(current.median,c)}, prediction interval ${rangeLabel(current.predictionCI,c)}; target-score estimate ${rankLabel(target.median,c)}, prediction interval ${rangeLabel(target.predictionCI,c)}. Thick blue lines show mean confidence intervals. ${N}+ means beyond the listed field.`;
 }
-function renderScenario() {
+function renderScenarioBase() {
  const c=scenarioConfig(),m=D.models[modelKey(c)],mode=$('scenario-mode').value;
  const input=$(mode==='rank'?'scenario-rank':'scenario-score');
  $('scenario-rank-field').hidden=mode!=='rank';$('scenario-score-field').hidden=mode!=='score';
@@ -1538,6 +1555,147 @@ $('scenario-download').addEventListener('click',()=>{
  for(const [name,score,s] of [['recorded',D.user.overall,currentSummary],['target',target.score,targetSummary]])rows.push([name,D.date,name==='target'?target.mode:'recorded',name==='target'?target.value:D.user.british,score,name==='recorded'?D.user.british:scenarioUKPosition(D,score),name==='target'?target.reference?.name:'',c.system,c.basis,c.cohort,c.method,c.basis==='performance'?c.finishes:'not applicable',m.n,rankLabel(s.median,c),rankLabel(s.meanCI[0],c),rankLabel(s.meanCI[1],c),rankLabel(s.predictionCI[0],c),rankLabel(s.predictionCI[1],c),score<m.xRange[0]||score>m.xRange[1],'Provisional fixed-field model comparison; not an official rank or a causal forecast. Overall-score model.']);
  download(`sofya-ranking-scenario-${D.date}.csv`,rows);
 });
+// The comparison group is independent of both the visible field and the model.
+function updateFieldCoverage() {
+ const ranks=D.fieldAthletes.map(a=>a.british),count=D.fieldAthletes.length;
+ $('field-range').querySelector('[value="all"]').textContent=`All saved UK women (${count.toLocaleString()})`;
+ $('field-coverage-note').textContent=`Saved coverage: British women · middle distance · ranks ${Math.min(...ranks).toLocaleString()}–${Math.max(...ranks).toLocaleString()} (${dateLong(D.date)}).${Math.max(...ranks)<=1000?' “All saved” and “Top 1,000” currently show the same athletes.':''}`;
+}
+function fieldProQuartiles(data) {
+ const seen=new Set(),scores=[];
+ for(const a of data.fieldAthletes)if(a.status==='matched'&&!seen.has(a.id)&&(Number.isFinite(a.ptoRank)||Number.isFinite(a.openRank))){seen.add(a.id);scores.push(a.overall)}
+ scores.sort((a,b)=>a-b);
+ if(scores.length<4)return null;
+ return {n:scores.length,min:scores[0],q1:quantile(scores,.25),median:quantile(scores,.5),q3:quantile(scores,.75),max:scores[scores.length-1]};
+}
+function nearestFieldRank(rows,rank) {
+ return rows.reduce((best,a)=>Math.abs(a.british-rank)<Math.abs(best.british-rank)?a:best,rows[0]).british;
+}
+let fieldGeometry=null,fieldDrag=null,fieldDragFrame=0;
+function drawFieldScoreBands(g) {
+ const q=fieldProQuartiles(D);if(!q||!$('field-show-quartiles').checked)return;
+ const {el,L,R,T,B,Y}=g,top=Math.max(T,Y(q.q3)),bottom=Math.min(B,Y(q.q1));
+ const band=svg('g',{'pointer-events':'none','aria-hidden':'true',id:'field-pro-bands'});
+ if(bottom>top)band.append(svg('rect',{x:L,y:top,width:R-L,height:bottom-top,fill:'#fce8ef',opacity:.7}));
+ const compact=g.W<600;
+ for(const [value,label] of [[q.q3,compact?'Upper 25%':'Upper 25% starts'],[q.median,'Median'],[q.q1,compact?'Lower 25%':'Lower 25% ends']]) {
+  const y=Y(value);if(y<T||y>B)continue;
+  band.append(svg('line',{x1:L,y1:y,x2:R,y2:y,stroke:value===q.median?'#be6e91':'#d9a9be','stroke-width':value===q.median?1.5:1,'stroke-dasharray':value===q.median?'5 4':'2 5'}));
+  const text=`${label} · ${fmt(value)}`,w=text.length*(compact?5.3:7.6)+12,ly=y>T+19?y-6:y+15;
+  band.append(svg('rect',{x:R-w-3,y:ly-13,width:w+3,height:18,rx:3,fill:'#fff9fc',opacity:.94}),svg('text',{x:R-7,y:ly,'text-anchor':'end',class:'quartile-label'},text));
+ }
+ el.append(band);
+}
+function mountFieldTarget(g) {
+ const layer=svg('g',{id:'field-target-marker',class:'field-drag-handle',role:'slider',tabindex:'0','aria-label':'Hypothetical UK rank. Drag left or right.','aria-orientation':'horizontal','aria-valuemin':g.rankMin,'aria-valuemax':g.rankMax});
+ layer.append(svg('line',{class:'field-target-guide',y1:g.T,y2:g.B}),
+  svg('line',{class:'field-target-hit',y1:g.T,y2:g.B,stroke:'transparent','stroke-width':22}),
+  svg('circle',{class:'field-target-dot',r:7,fill:'white',stroke:'#286b7a','stroke-width':3,'pointer-events':'none'}),
+  svg('rect',{class:'field-handle-pill',width:126,height:30,rx:7,fill:'#286b7a',stroke:'white','stroke-width':1.5}),
+  svg('text',{class:'field-target-label','text-anchor':'middle','pointer-events':'none'}));
+ layer.addEventListener('pointerdown',event=>{
+  if(event.button!==0||!scenarioResult)return;
+  const p=new DOMPoint(event.clientX,event.clientY).matrixTransform(g.el.getScreenCTM().inverse());
+  const rank=Number(layer.getAttribute('aria-valuenow'));
+  fieldDrag={id:event.pointerId,offset:p.x-g.X(rank),clientX:event.clientX,clientY:event.clientY};
+  g.el.setPointerCapture(event.pointerId);layer.focus({preventScroll:true});event.preventDefault();event.stopPropagation();
+ });
+ layer.addEventListener('keydown',event=>{
+  const current=Number(layer.getAttribute('aria-valuenow'));
+  const keys={ArrowLeft:current-1,ArrowRight:current+1,ArrowUp:current-1,ArrowDown:current+1,PageUp:current-10,PageDown:current+10,Home:g.rankMin,End:g.rankMax};
+  if(!(event.key in keys))return;
+  event.preventDefault();setFieldTarget(nearestFieldRank(g.rows,keys[event.key]),false);
+ });
+ g.el.append(layer);syncFieldExplorer();
+}
+function fieldTargetPosition(target) {
+ return target.mode==='rank'?target.value:Number.parseInt(scenarioUKPosition(D,target.score),10);
+}
+function syncFieldExplorer() {
+ const entry=$('field-target-rank'),q=fieldProQuartiles(D),g=fieldGeometry,layer=$('field-target-marker');
+ entry.max=Math.max(...D.fieldAthletes.map(a=>a.british));
+ $('field-quartile-summary').hidden=!$('field-show-quartiles').checked;
+ if(q) {
+  const offscreen=g&&(q.q1>g.maxScore||q.q3<g.minScore);
+  $('field-quartile-context').textContent=`Pro-list score benchmarks · ${q.n} uniquely matched British women · data downloaded ${dateLong(D.date)}. The shaded band is the middle 50%; the dashed rose line is the median (${fmt(q.median)}).${offscreen?' These quartiles are outside this zoom; choose Top 125 or All athletes to see them.':''}`;
+  $('field-quartile-low').textContent=`≤ ${fmt(q.q1)}`;
+  $('field-quartile-middle').textContent=`${fmt(q.q1)}–${fmt(q.q3)}`;
+  $('field-quartile-high').textContent=`≥ ${fmt(q.q3)}`;
+ } else {
+  $('field-quartile-context').textContent='Fewer than four unique pro-list matches are available in this saved download.';
+  for(const id of ['low','middle','high'])$('field-quartile-'+id).textContent='Unavailable';
+ }
+ if(!scenarioResult) {
+  $('field-live-rank').textContent='Enter a valid target below';$('field-live-score').textContent='';$('field-live-world').textContent='';
+  if(layer)layer.setAttribute('display','none');
+  $('field-target-score').textContent='Enter a valid target';$('field-target-world').textContent='';$('field-target-interval').textContent='';
+  $('field-target-error').textContent=$('scenario-error').textContent;$('field-target-error').hidden=false;entry.setAttribute('aria-invalid','true');
+  $('field-target-warning').hidden=true;return;
+ }
+ const {c,target,targetSummary}=scenarioResult,rank=fieldTargetPosition(target);
+ $('field-live-rank').textContent=`Hypothetical UK ${target.mode==='score'?'≈':'#'}${rank}`;
+ $('field-live-score').textContent=`${fmt(target.score)} points`;
+ $('field-live-world').textContent=`${fieldLabel(c)} ≈${rankLabel(targetSummary.median,c)} · 95% prediction ${rangeLabel(targetSummary.predictionCI,c)}`;
+ if(document.activeElement!==entry)entry.value=rank;
+ entry.removeAttribute('aria-invalid');$('field-target-error').hidden=true;
+ document.querySelector('label[for="field-target-rank"]').textContent=target.mode==='rank'?'Hypothetical UK rank':'Approximate UK rank (score target)';
+ $('field-target-score').textContent=`${fmt(target.score)} MyTriRanking points`;
+ $('field-target-world').textContent=`Provisional ${fieldLabel(c)} world rank: ${rankLabel(targetSummary.median,c)}`;
+ $('field-target-interval').textContent=`95% prediction interval: ${rangeLabel(targetSummary.predictionCI,c)}`;
+ $('field-target-model').textContent=`${fieldLabel(c)} · ${c.basis==='performance'?c.finishes+' comparable scoring finishes':'published-rank comparison'} · ${cohortLabel(c.cohort)} · ${methodLabel(c.method)}. These settings match the simulator below.`;
+ const warnings=[];
+ if(!$('scenario-warning').hidden)warnings.push($('scenario-warning').textContent);
+ const inView=g&&rank>=g.rankMin&&rank<=g.rankMax&&!scenarioUKPosition(D,target.score).endsWith('+');
+ if(g&&!inView)warnings.push('Your target is outside this chart view. Choose “All athletes” to locate it, or enter a rank within the visible range.');
+ if(g&&inView&&(target.score>g.maxScore||target.score<g.minScore))warnings.push('This score is outside the visible vertical scale. The line still marks its approximate UK position.');
+ $('field-target-warning').hidden=!warnings.length;$('field-target-warning').textContent=warnings.join(' ');
+ if(!layer||!g)return;
+ layer.setAttribute('display',inView?'':'none');if(!inView)return;
+ const x=g.X(rank),y=g.Y(target.score),labelX=Math.max(g.L+65,Math.min(g.R-65,x));
+ for(const line of layer.querySelectorAll('line')){line.setAttribute('x1',x);line.setAttribute('x2',x)}
+ const dot=layer.querySelector('.field-target-dot');dot.setAttribute('cx',x);dot.setAttribute('cy',y);dot.setAttribute('display',y<g.T||y>g.B?'none':'');
+ const pill=layer.querySelector('.field-handle-pill');pill.setAttribute('x',labelX-63);pill.setAttribute('y',g.T-15);
+ const text=layer.querySelector('text');text.setAttribute('x',labelX);text.setAttribute('y',g.T+5);text.textContent=`↔ Target ${target.mode==='score'?'≈':'#'}${rank}`;
+ layer.setAttribute('aria-valuenow',rank);layer.setAttribute('aria-valuetext',`UK ${rank}, ${fmt(target.score)} points. Estimated ${fieldLabel(c)} rank ${rankLabel(targetSummary.median,c)}; prediction interval ${rangeLabel(targetSummary.predictionCI,c)}.`);
+}
+function setFieldTarget(raw,allowViewChange=true) {
+ $('scenario-mode').value='rank';$('scenario-rank').value=raw;
+ let changedView=false;
+ try {
+  const target=scenarioTarget(D,'rank',raw);
+  if(allowViewChange&&!fieldRows().some(a=>a.british===target.value)){$('field-range').value='all';changedView=true}
+ }catch(error){/* The shared simulator presents the input error. */}
+ renderScenario();if(changedView)drawField();
+}
+function applyFieldDrag() {
+ fieldDragFrame=0;if(!fieldDrag||!fieldGeometry)return;
+ const g=fieldGeometry,p=new DOMPoint(fieldDrag.clientX,fieldDrag.clientY).matrixTransform(g.el.getScreenCTM().inverse());
+ const raw=g.rankMin+(p.x-fieldDrag.offset-g.L)/(g.R-g.L)*(g.rankMax-g.rankMin);
+ const rank=nearestFieldRank(g.rows,raw);
+ if($('scenario-mode').value!=='rank'||Number($('scenario-rank').value)!==rank)setFieldTarget(rank,false);
+}
+// Bind once to the stable SVG. Redrawing individual marks never duplicates handlers.
+const fieldDragSVG=$('field-plot');
+fieldDragSVG.addEventListener('pointermove',event=>{
+ if(!fieldDrag||fieldDrag.id!==event.pointerId)return;
+ fieldDrag.clientX=event.clientX;fieldDrag.clientY=event.clientY;
+ if(!fieldDragFrame)fieldDragFrame=requestAnimationFrame(applyFieldDrag);
+ event.preventDefault();
+});
+fieldDragSVG.addEventListener('pointerup',event=>{
+ if(!fieldDrag||fieldDrag.id!==event.pointerId)return;
+ fieldDrag.clientX=event.clientX;fieldDrag.clientY=event.clientY;
+ if(fieldDragFrame)cancelAnimationFrame(fieldDragFrame);
+ applyFieldDrag();fieldDrag=null;
+ if(fieldDragSVG.hasPointerCapture(event.pointerId))fieldDragSVG.releasePointerCapture(event.pointerId);
+});
+fieldDragSVG.addEventListener('pointercancel',()=>{if(fieldDragFrame)cancelAnimationFrame(fieldDragFrame);fieldDragFrame=0;fieldDrag=null});
+$('field-target-rank').addEventListener('input',event=>setFieldTarget(event.target.value));
+$('field-target-reset').addEventListener('click',()=>setFieldTarget(D.user.british));
+$('field-show-quartiles').addEventListener('change',drawField);
+
+function renderScenario(){renderScenarioBase();syncFieldExplorer()}
+
 snapshots.forEach(d=>{const o=document.createElement('option');o.value=d.date;o.textContent=dateLong(d.date);$('snapshot-date').append(o)});
 $('snapshot-date').addEventListener('change',e=>selectSnapshot(e.target.value));$('latest-snapshot').addEventListener('click',()=>selectSnapshot(snapshots[snapshots.length-1].date));
 $('history-metric').addEventListener('change',()=>drawHistory(config()));$('history-baseline').addEventListener('change',renderHistory);
