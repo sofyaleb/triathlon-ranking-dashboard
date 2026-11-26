@@ -83,6 +83,18 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-se
 @media(max-width:1150px){.sidebar{position:relative;width:auto;inset:auto;padding:17px 24px;overflow:visible;display:grid;grid-template-columns:160px 1fr;gap:22px;align-items:center}.side-brand{padding:0}.brand-symbol{display:none}.brand-name{font-size:24px}.brand-subtitle{font-size:10px;margin-top:5px}.section-nav{flex-direction:row;flex-wrap:wrap;gap:6px;margin:0;justify-content:flex-end}.section-nav a{padding:9px 10px;font-size:12px;gap:7px}.section-nav svg{width:15px;height:15px}.sidebar-bottom{display:none}.dashboard{margin-left:auto;padding:23px 24px 40px}.heading{display:block}.hero-art{width:220px}.actuals>div{display:flex;flex-direction:column;align-items:flex-start}.distribution-layout{gap:24px}.topline{margin-bottom:23px}.field-selected{grid-template-columns:1fr 1fr}.field-evidence{grid-column:1/-1;border-top:1px solid var(--line);padding-top:15px}}
 @media(max-width:760px){.sidebar{display:block;padding:18px 17px}.side-brand{display:flex;align-items:baseline;gap:13px}.brand-name{font-size:25px}.brand-subtitle{font-size:10px;margin-top:0}.section-nav{justify-content:flex-start;gap:5px;margin-top:16px}.section-nav a{font-size:12px;padding:8px 10px}.section-nav svg{display:none}.dashboard{margin:0;padding:18px 14px 30px}.topline{padding:13px 14px;margin-bottom:23px;gap:12px;flex-wrap:wrap}.topline strong{font-size:14px}.topline span{font-size:11px;max-width:none;white-space:nowrap;padding:4px 7px}.hero-intro{display:block;margin-bottom:20px}h1{font-size:35px}.hero-art{display:none}.heading p{font-size:14px}.actuals{grid-template-columns:1fr 1fr;gap:10px}.actuals>div{min-height:105px;padding:14px 16px;gap:8px}.actuals b{font-size:31px}.actuals .kpi-label{font-size:12px}.primary-block{padding:22px 17px;margin-top:20px}.control-area{padding:19px 17px}.section-head h2{font-size:23px}.distribution-layout,.scatter-layout{grid-template-columns:1fr}.stat-column{grid-template-columns:1fr 1fr;gap:10px}.stat-primary{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:0 18px;padding:18px}.stat-primary>.stat-label{grid-column:1/-1}.stat-main{font-size:48px;margin:8px 0 0}.stat-primary .stat-sub{margin-top:8px}.interval-stat{padding:15px 13px}.interval-stat b{font-size:26px}.interval-stat .stat-label{font-size:10px}.interval-stat .stat-sub{font-size:12px}.chart-legend{font-size:12px;gap:10px 16px}.field-selected{grid-template-columns:1fr}.field-evidence{grid-column:auto}.advanced-summary{display:none}.uncertainty-card h3{font-size:18px}.footer{font-size:12px;gap:10px}.segmented button{font-size:12px}.field-note,.fit-note{font-size:13px}}
 @media print{.sidebar,.hero-art{display:none!important}.dashboard{margin:0;max-width:none;padding:0}.topline{box-shadow:none;padding:0}.actuals{grid-template-columns:repeat(4,1fr)}.actuals>div{color:#231b22;border:1px solid #bbb;min-height:80px}.primary-block{box-shadow:none}.stat-primary{background:white;color:#231b22;border:1px solid #bbb}.stat-primary .stat-label,.stat-primary .stat-sub,.stat-main{color:#231b22}.stat-column{display:block}.interval-stat{margin-top:8px}.field-selected{grid-template-columns:1fr 1fr 1fr}.field-evidence{grid-column:auto}}
+
+.details-content{overflow-wrap:anywhere;min-width:0}.details-content pre{max-width:100%;overflow-x:auto}
+.actuals>div{display:grid;grid-template-rows:minmax(2.7em,auto) auto minmax(2.8em,auto);align-content:start;align-items:start;justify-content:stretch;gap:6px;padding:16px 18px;min-height:0;min-width:0}
+.actuals .kpi-label{font-size:13px;line-height:1.35}.actuals b{line-height:1.2;margin:0}.actuals .kpi-caption{display:block;font-size:13px;line-height:1.4;font-weight:400;max-width:none;margin-top:2px}
+.section-head>div{min-width:0}.section-head .meta{flex:none;max-width:100%;white-space:normal;text-align:center;line-height:1.5}
+.diagnostics>div{display:grid;grid-template-rows:1fr auto;gap:8px;align-content:start;min-width:0}.diagnostics b{margin:0}.diagnostics span{line-height:1.4}
+.uncertainty-card h3{min-height:2.6em;line-height:1.3}.field-controls{gap:16px}.field-controls .range-choice{width:225px}.field-controls .athlete-choice{min-width:210px;max-width:none}.field-controls .button{white-space:nowrap}
+.field-plot{min-width:0;min-height:0}.field-plot-scroll{overflow:visible}.field-plot .tick{font-size:13px}.field-plot .axis{font-size:14px}.field-plot-wrap{margin-top:20px}.field-legend{row-gap:12px;column-gap:22px}.field-legend .key{white-space:nowrap}
+.field-neighbours{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.field-neighbour{display:grid;grid-template-columns:1fr auto;gap:5px 16px;text-align:left;border:1px solid #e7dce2;border-radius:10px;padding:16px 18px;background:#fff9fb;color:var(--ink);min-width:0}.field-neighbour:hover{border-color:#b7466b;background:#fff0f5}.field-neighbour[aria-pressed=true]{border-color:var(--cool);background:#edf8fa;box-shadow:inset 3px 0 0 var(--cool)}.neighbour-label{grid-column:1/-1;font-size:12px;color:var(--muted);line-height:1.5}.neighbour-name{font-size:17px;font-weight:600;line-height:1.4}.neighbour-gap{grid-row:3;grid-column:1/-1;font-size:14px;color:#850e25;line-height:1.5}.neighbour-facts{font-size:12px;color:var(--muted);align-self:center;line-height:1.5}.field-context-note{font-size:13px;line-height:1.6;color:var(--muted);margin-top:12px}.field-selected{gap:24px}.field-facts>div{min-width:0}.field-note,.fit-note{font-size:13px}
+@media(min-width:761px) and (max-width:1390px){.field-neighbour{grid-template-columns:1fr}.neighbour-facts{grid-row:3}.neighbour-gap{grid-row:4}.field-controls .athlete-choice{flex-basis:260px}.field-controls .field-download{margin-left:auto}}
+@media(max-width:760px){.actuals>div{display:grid;padding:15px;gap:5px}.actuals b{font-size:31px}.actuals .kpi-label{font-size:13px}.actuals .kpi-caption{font-size:12px;line-height:1.5}.topline span{white-space:normal;text-align:left}.topline{gap:8px}.field-controls{grid-template-columns:1fr auto;gap:14px 10px}.field-controls .range-choice{width:auto;min-width:0}.field-controls .athlete-choice{min-width:0}.field-controls .field-download{margin-left:0}.field-plot .axis{font-size:12px}.field-plot .tick{font-size:12px}.field-plot .you-label,.field-plot .field-name-label{font-size:13px}.field-neighbours{grid-template-columns:1fr;gap:12px}.field-neighbour{grid-template-columns:1fr;padding:15px}.neighbour-facts{grid-row:3}.neighbour-gap{grid-row:4}.uncertainty-card h3{min-height:0}.field-selected{gap:20px}.field-context-note{font-size:13px}.section-head .meta{text-align:left}.field-legend{column-gap:16px}.stat-column{grid-template-columns:1fr}.stat-primary{display:block}.stat-primary .stat-sub{margin-top:0}.interval-stat .stat-label{font-size:12px}.interval-stat .stat-sub{font-size:13px}.interval-stat b{font-size:29px}.segmented{display:flex}.segmented button{flex:1}.diagnostics{gap:18px 14px}}
+@media print{.field-neighbours{break-inside:avoid}.field-neighbour{background:white}.field-plot{min-width:0}.actuals>div{display:grid;padding:12px}.field-neighbours button{display:grid}}
 </style>
 <aside class="sidebar" aria-label="Dashboard navigation">
 <div class="side-brand">
@@ -117,7 +129,8 @@ Sofya Lebedeva<small>Performance study · 2026</small>
 </aside>
 <main class="dashboard" id="app">
 <div class="topline">
-<strong>Performance dashboard</strong><span>Data downloaded on 25 November 2026</span>
+<strong>Performance dashboard</strong><span>Data downloaded on 25
+November 2026</span>
 </div>
 <header class="heading">
 <div class="hero-intro">
@@ -136,22 +149,23 @@ the assumptions matter.
 </div>
 <div class="actuals">
 <div class="kpi-rank">
-<span class="kpi-label">British middle-distance
-rank</span><b id="actual-british"></b>
+<span class="kpi-label">British
+rank</span><b id="actual-british"></b><small class="kpi-caption">Women ·
+middle distance</small>
 </div>
 <div class="kpi-score">
-<span class="kpi-label">MyTriRanking overall
-score</span><b id="actual-overall"></b>
+<span class="kpi-label">Overall
+score</span><b id="actual-overall"></b><small class="kpi-caption">MyTriRanking
+points</small>
 </div>
 <div class="kpi-best">
-<span class="kpi-label">My best-race
-score</span><b id="actual-best"></b>
+<span class="kpi-label">Best-race
+score</span><b id="actual-best"></b><small class="kpi-caption">MyTriRanking
+points</small>
 </div>
 <div class="kpi-cohort">
-<span class="kpi-label">Athletes in this model</span>
-<div class="cohort-count">
-<b id="overview-n"></b><small id="overview-cohort"></small>
-</div>
+<span class="kpi-label">Athletes in this
+model</span><b id="overview-n"></b><small class="kpi-caption" id="overview-cohort"></small>
 </div>
 </div>
 </header>
@@ -306,8 +320,9 @@ Uncertainty in the fitted relationship
 Where you sit in MyTriRanking
 </h2>
 <p>
-British women · middle distance · actual overall scores. Every dot is an
-athlete; select one to see her details.
+British women · middle distance. See the whole ranking curve, or choose
+“Near my rank” to compare score gaps around you. Select any dot for
+athlete details.
 </p>
 </div>
 <span id="field-scope-label" class="meta"></span>
@@ -318,7 +333,9 @@ athlete; select one to see her details.
 <div class="select-wrap">
 <select id="field-range"><option value="100">Top
 100</option><option value="150" selected>Top
-150</option><option value="1000">All 1,000 in the file</option></select>
+150</option><option value="near">Near my rank
+(±40)</option><option value="1000">All 1,000 in the
+file</option></select>
 </div>
 </div>
 <div class="field athlete-choice">
@@ -341,11 +358,8 @@ Download this field
 <b id="field-count-ambiguous"></b></span><span class="key"><i class="swatch user"></i> You
 <b id="field-count-self"></b></span>
 </div>
-<p class="field-mobile-hint">
-Scroll across the plot to see the full field.
-</p>
 <div class="field-plot-wrap">
-<div class="field-plot-scroll" tabindex="0" aria-label="MyTriRanking score plot; scroll horizontally on smaller screens">
+<div class="field-plot-scroll" aria-label="MyTriRanking score plot">
 <svg id="field-plot" class="chart field-plot" viewBox="0 0 1100 420" role="group" aria-labelledby="field-desc">
 <title id="field-desc">
 </title>
@@ -355,6 +369,14 @@ Scroll across the plot to see the full field.
 
 </div>
 </div>
+<div id="field-neighbours" class="field-neighbours" aria-label="Nearest pro-ranking matches by MyTriRanking score">
+
+</div>
+<p class="field-context-note">
+These are the closest uniquely matched athletes above and below your
+overall score in the supplied British list. The gaps are observed
+MyTriRanking points, not predictions of race time or pro rank.
+</p>
 <div id="field-detail" class="field-selected" aria-live="polite">
 
 </div>
@@ -802,20 +824,22 @@ function drawMethodChart(c){
 
 const fieldCategory=a=>a.isUser?'self':a.status;
 const fieldStatusLabel=a=>a.isUser?'You':({matched:'Pro-ranking match',unmatched:'Not matched · status unknown',ambiguous:'Ambiguous name'}[a.status]);
-const fieldRows=()=>D.fieldAthletes.filter(a=>a.british<=Number($('field-range').value));
+const fieldMe=()=>D.fieldAthletes.find(a=>a.isUser);
+const fieldRows=()=>{const range=$('field-range').value,me=fieldMe();return D.fieldAthletes.filter(a=>range==='near'?Math.abs(a.british-me.british)<=40:a.british<=Number(range))};
 function chooseFieldAthlete(id){fieldSelected=id;hideTip('field-tip');drawField()}
 function drawField(){
- const rows=fieldRows(),el=$('field-plot'),N=Number($('field-range').value),me=rows.find(a=>a.isUser);clearChart(el);
+ const rows=fieldRows(),el=$('field-plot'),N=rows.length,me=fieldMe(),near=$('field-range').value==='near';clearChart(el);
  if(!rows.some(a=>a.id===fieldSelected))fieldSelected=me.id;
- const active=rows.find(a=>a.id===fieldSelected),L=75,R=1065,T=45,B=350,minScore=Math.floor((Math.min(...rows.map(a=>a.overall))-12)/20)*20,maxScore=Math.ceil((Math.max(...rows.map(a=>a.overall))+12)/20)*20;
- const X=r=>L+(r-1)/(N-1)*(R-L),Y=v=>B-(v-minScore)/(maxScore-minScore)*(B-T),counts={matched:0,unmatched:0,ambiguous:0,self:0};rows.forEach(a=>counts[fieldCategory(a)]++);
+ const active=rows.find(a=>a.id===fieldSelected),W=Math.max(300,el.parentElement.clientWidth),compact=W<600,L=compact?48:65,R=W-20,T=43,B=compact?270:340,H=B+64,rankMin=rows[0].british,rankMax=rows[rows.length-1].british,roundTo=near?5:20,pad=near?5:12,minScore=Math.floor((Math.min(...rows.map(a=>a.overall))-pad)/roundTo)*roundTo,maxScore=Math.ceil((Math.max(...rows.map(a=>a.overall))+pad)/roundTo)*roundTo;
+ el.setAttribute('viewBox',`0 0 ${W} ${H}`);
+ const X=r=>L+(r-rankMin)/(rankMax-rankMin)*(R-L),Y=v=>B-(v-minScore)/(maxScore-minScore)*(B-T),counts={matched:0,unmatched:0,ambiguous:0,self:0};rows.forEach(a=>counts[fieldCategory(a)]++);
  Object.entries(counts).forEach(([key,n])=>$('field-count-'+key).textContent=n);
- $('field-scope-label').textContent=`${rows.length.toLocaleString()} athletes · your rank ${me.british}`;
- const step=maxScore-minScore>300?100:50;for(let score=Math.ceil(minScore/step)*step;score<=maxScore;score+=step){el.append(svg('line',{x1:L,y1:Y(score),x2:R,y2:Y(score),stroke:'#e7e1e6'}),svg('text',{x:L-12,y:Y(score)+5,'text-anchor':'end',class:'tick'},score))}
- const rankTicks=N===100?[1,25,50,75,100]:N===150?[1,25,50,75,100,125,150]:[1,200,400,600,800,1000];rankTicks.forEach(r=>el.append(svg('text',{x:X(r),y:B+26,'text-anchor':r===1?'start':r===N?'end':'middle',class:'tick'},r.toLocaleString())));
- el.append(svg('text',{x:L,y:20,class:'axis'},'MyTriRanking overall score · higher is better'),svg('text',{x:(L+R)/2,y:404,'text-anchor':'middle',class:'axis'},'British middle-distance rank · lower is better'));
+ $('field-scope-label').textContent=`${near?'Ranks '+rankMin+'–'+rankMax:'Top '+rows.length.toLocaleString()} · your rank ${me.british} of ${D.fieldAthletes.length.toLocaleString()}`;
+ const span=maxScore-minScore,step=span<=50?10:span<=100?20:span<=300?50:100;for(let score=Math.ceil(minScore/step)*step;score<=maxScore;score+=step){el.append(svg('line',{x1:L,y1:Y(score),x2:R,y2:Y(score),stroke:'#e7e1e6'}),svg('text',{x:L-12,y:Y(score)+5,'text-anchor':'end',class:'tick'},score))}
+ const rankTicks=near?[rankMin,me.british,rankMax]:N===100?(compact?[1,50,100]:[1,25,50,75,100]):N===150?(compact?[1,50,100,150]:[1,25,50,75,100,125,150]):compact?[1,500,1000]:[1,200,400,600,800,1000];rankTicks.forEach(r=>el.append(svg('text',{x:X(r),y:B+26,'text-anchor':r===rankMin?'start':r===rankMax?'end':'middle',class:'tick'},r.toLocaleString())));
+ el.append(svg('text',{x:L,y:20,class:'axis'},compact?'Overall score · higher is better':'MyTriRanking overall score · higher is better'),svg('text',{x:(L+R)/2,y:H-12,'text-anchor':'middle',class:'axis'},compact?'British rank · lower is better':'British middle-distance rank · lower is better'));
  el.append(svg('polyline',{points:rows.map(a=>`${X(a.british)},${Y(a.overall)}`).join(' '),fill:'none',stroke:'#dbe9ec','stroke-width':1.2,'pointer-events':'none'}));
- el.append(svg('line',{x1:X(me.british),y1:T,x2:X(me.british),y2:B,stroke:'#d82046','stroke-width':1.2,'stroke-dasharray':'4 5',opacity:.65,'pointer-events':'none'}));
+ el.append(svg('line',{x1:X(me.british),y1:T,x2:X(me.british),y2:B,stroke:'#d82046','stroke-width':1.2,'stroke-dasharray':'4 5',opacity:.65,'pointer-events':'none'}),svg('line',{x1:L,y1:Y(me.overall),x2:R,y2:Y(me.overall),stroke:'#d82046','stroke-width':1.2,'stroke-dasharray':'4 5',opacity:.65,'pointer-events':'none'}));
  const nearestPoint=e=>{const pt=new DOMPoint(e.clientX,e.clientY).matrixTransform(el.getScreenCTM().inverse());return rows.reduce((best,a)=>Math.hypot(X(a.british)-pt.x,Y(a.overall)-pt.y)<Math.hypot(X(best.british)-pt.x,Y(best.overall)-pt.y)?a:best,rows[0])};
  const order={unmatched:0,matched:1,ambiguous:2,self:3};[...rows].sort((a,b)=>order[fieldCategory(a)]-order[fieldCategory(b)]).forEach(a=>{
   const cat=fieldCategory(a),x=X(a.british),y=Y(a.overall),chosen=a.id===fieldSelected,small=N===1000;
@@ -825,11 +849,17 @@ function drawField(){
   else group.append(svg('circle',{cx:x,cy:y,r:cat==='self'?7:cat==='matched'?(small?3.5:4.6):(small?2.3:3.7),fill:cat==='self'?'#d82046':cat==='matched'?'#850e25':'#c9edf1',stroke:cat==='unmatched'?'#6394a0':'white','stroke-width':cat==='self'?2:1,'pointer-events':'none'}));
   group.addEventListener('click',e=>chooseFieldAthlete(nearestPoint(e).id));group.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseFieldAthlete(a.id)}});group.addEventListener('pointermove',e=>{const near=nearestPoint(e);tip('field-tip',e,`${near.name}\nBritish rank ${near.british} · ${fmt(near.overall)} points\n${fieldStatusLabel(near)}\nClick for details`)});group.addEventListener('pointerleave',()=>hideTip('field-tip'));el.append(group);
  });
- const annotate=(a,text,isYou)=>{const x=X(a.british),y=Y(a.overall),w=text.length*7.5+22,lx=Math.max(L+4,Math.min(R-w-4,x+14)),ly=isYou?Math.max(T+5,y-39):Math.min(B-29,Math.max(T+5,y+16));const g=svg('g',{'pointer-events':'none'});g.append(svg('line',{x1:x+5,y1:y+(isYou?-4:4),x2:lx+8,y2:ly+(isYou?22:4),stroke:isYou?'#d82046':'#286b7a',opacity:.6}),svg('rect',{x:lx,y:ly,width:w,height:28,rx:5,fill:isYou?'#fff0f4':'#eff9fb',stroke:isYou?'#edbbc8':'#bddfe7'}),svg('text',{x:lx+11,y:ly+19,class:isYou?'you-label':'field-name-label'},text));el.append(g)};
+ const annotate=(a,text,isYou)=>{const maxChars=Math.max(16,Math.floor((R-L-30)/7.5));if(text.length>maxChars)text=text.slice(0,maxChars-1)+'…';const x=X(a.british),y=Y(a.overall),w=text.length*7.5+22,lx=Math.max(L+4,Math.min(R-w-4,x+14)),ly=isYou?Math.max(T+5,y-39):Math.min(B-29,Math.max(T+5,y+16));const g=svg('g',{'pointer-events':'none'});g.append(svg('line',{x1:x+5,y1:y+(isYou?-4:4),x2:lx+8,y2:ly+(isYou?22:4),stroke:isYou?'#d82046':'#286b7a',opacity:.6}),svg('rect',{x:lx,y:ly,width:w,height:28,rx:5,fill:isYou?'#fff0f4':'#eff9fb',stroke:isYou?'#edbbc8':'#bddfe7'}),svg('text',{x:lx+11,y:ly+19,class:isYou?'you-label':'field-name-label'},text));el.append(g)};
  el.append(svg('circle',{cx:X(active.british),cy:Y(active.overall),r:active.isUser?11:9,fill:'none',stroke:active.isUser?'#d82046':'#286b7a','stroke-width':1.6,'pointer-events':'none'}));
  annotate(me,`You · #${me.british} · ${fmt(me.overall)}`,true);if(!active.isUser)annotate(active,active.name,false);
- $('field-desc').textContent=`Scores for the top ${rows.length} British women in MyTriRanking middle distance. ${counts.matched} pro-ranking name matches, ${counts.unmatched} not matched, ${counts.ambiguous} ambiguous names, and you. Your rank is ${me.british} with ${fmt(me.overall)} points. Click a dot or use the athlete dropdown.`;
+ $('field-desc').textContent=`Scores for British ranks ${rankMin} to ${rankMax} in MyTriRanking middle distance. ${counts.matched} pro-ranking name matches, ${counts.unmatched} not matched, ${counts.ambiguous} ambiguous names, and you. Your rank is ${me.british} with ${fmt(me.overall)} points. Click a dot or use the athlete dropdown.`;
+ drawFieldNeighbours();
  const picker=$('field-athlete');picker.replaceChildren();rows.forEach(a=>{const o=document.createElement('option');o.value=a.id;o.textContent=`${a.british}. ${a.name}${a.isUser?' · you':''}`;picker.append(o)});picker.value=fieldSelected;showFieldAthlete(active);
+}
+function drawFieldNeighbours(){
+ const node=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e};
+ const me=fieldMe(),matches=D.fieldAthletes.filter(a=>a.status==='matched'&&!a.isUser),above=matches.filter(a=>a.overall>me.overall).sort((a,b)=>a.overall-b.overall)[0],below=matches.filter(a=>a.overall<me.overall).sort((a,b)=>b.overall-a.overall)[0],root=$('field-neighbours');root.replaceChildren();
+ for(const [direction,a] of [['above',above],['below',below]]){if(!a)continue;const button=node('button','field-neighbour');button.type='button';button.dataset.athleteId=a.id;button.setAttribute('aria-pressed',String(fieldSelected===a.id));button.setAttribute('aria-label',`Inspect ${a.name}, closest pro-ranking match ${direction} your score`);button.append(node('span','neighbour-label',`Nearest pro-ranking match ${direction}`),node('strong','neighbour-name',a.name),node('span','neighbour-gap',`${fmt(Math.abs(a.overall-me.overall))} points ${direction} you`),node('span','neighbour-facts',`British #${a.british} · ${fmt(a.overall)} points`));button.addEventListener('click',()=>{if(!fieldRows().some(r=>r.id===a.id))$('field-range').value='1000';chooseFieldAthlete(a.id);[...$('field-neighbours').querySelectorAll('button')].find(b=>b.dataset.athleteId===a.id)?.focus({preventScroll:true})});root.append(button)}
 }
 function showFieldAthlete(a){
  const root=$('field-detail');root.replaceChildren();const node=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e};
@@ -840,7 +870,7 @@ function showFieldAthlete(a){
  const race=node('p');race.append(node('strong','','Highest-scoring race'),document.createElement('br'),document.createTextNode(a.bestRace));evidence.append(race);root.append(identity,facts,evidence);
 }
 $('field-range').addEventListener('change',drawField);$('field-athlete').addEventListener('change',e=>chooseFieldAthlete(e.target.value));$('field-find-me').addEventListener('click',()=>chooseFieldAthlete(D.fieldAthletes.find(a=>a.isUser).id));
-$('field-download').addEventListener('click',()=>download(`mytriranking-british-top-${$('field-range').value}-2026-11-25.csv`,[['british_rank','athlete_name','overall_score','best_race_score','age_group','pro_ranking_match_status','is_sofya','pto_rank','openrank_rank','match_note','mytriranking_profile'],...fieldRows().map(a=>[a.british,a.name,a.overall,a.best,a.ageGroup,a.status,a.isUser,a.ptoRank,a.openRank,a.matchNote,a.mytriURL])]));
+$('field-download').addEventListener('click',()=>download(`mytriranking-british-${$('field-range').value==='near'?'near-my-rank':'top-'+$('field-range').value}-2026-11-25.csv`,[['british_rank','athlete_name','overall_score','best_race_score','age_group','pro_ranking_match_status','is_sofya','pto_rank','openrank_rank','match_note','mytriranking_profile'],...fieldRows().map(a=>[a.british,a.name,a.overall,a.best,a.ageGroup,a.status,a.isUser,a.ptoRank,a.openRank,a.matchNote,a.mytriURL])]));
 
 function normaliseControls(){const isOpen=$('system').value==='openrank';$('basis').options[0].disabled=isOpen;if(isOpen)$('basis').value='rank';const raw=$('basis').value==='rank';$('cohort').options[2].disabled=raw;if(raw&&$('cohort').value==='complete')$('cohort').value='all';$('finishes').disabled=raw;$('finishes-hint').hidden=!raw}
 function render(){normaliseControls();const c=config(),m=modelNow();if(!m)throw Error('Unsupported configuration');const s=summarise(m,c);
@@ -868,6 +898,8 @@ const navLinks=[...document.querySelectorAll('.section-nav a')];
 let navQueued=false;
 function updateNavigation(){let current=navLinks[0];for(const link of navLinks){const section=document.querySelector(link.getAttribute('href'));if(section.getBoundingClientRect().top<=180)current=link}for(const link of navLinks){if(link===current)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')}navQueued=false}
 window.addEventListener('scroll',()=>{if(!navQueued){navQueued=true;requestAnimationFrame(updateNavigation)}},{passive:true});updateNavigation();
+let fieldWidth=$('field-plot').parentElement.clientWidth,fieldResizeQueued=false;
+window.addEventListener('resize',()=>{if(!fieldResizeQueued){fieldResizeQueued=true;requestAnimationFrame(()=>{const next=$('field-plot').parentElement.clientWidth;if(Math.abs(next-fieldWidth)>1){fieldWidth=next;drawField()}fieldResizeQueued=false})}},{passive:true});
 </script>
 
 
