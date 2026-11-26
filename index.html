@@ -155,6 +155,58 @@ html.help-is-open{overflow:hidden}.help-dialog{padding:0;border:1px solid #e7dce
 @media(max-width:760px){.field-band-switch{margin-left:0}.field-target-live{gap:4px 12px}.field-target-live span+span{border:0;padding-left:0}.field-target-live span:last-child{flex-basis:100%}.field-target-panel{grid-template-columns:minmax(0,1fr);padding:17px;gap:16px}.field-target-entry input{width:95px}.field-target-answer{border-top:1px solid #bddfe7;padding-top:13px}.field-quartile-values{gap:7px}.field-quartile-values>span{padding:10px 8px;font-size:13px}.field-quartile-values b{font-size:15px}.field-plot .quartile-label{font-size:10px}.field-plot .field-target-label{font-size:12px}}
 @media print{.field-target-entry input,.field-target-entry button,.field-band-switch,.field-explorer-links{display:none}.field-target-panel{break-inside:avoid}.field-quartile-summary{break-inside:avoid}}
 
+
+/* Supporting analysis is scoped below the unchanged MyTriRanking field. */
+.support-nav{display:block;margin:22px 13px 0;color:#f6c8d6;font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.essentials-world .control-area{margin:22px 0 0;padding:0 0 18px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}
+.essentials-world .section-head p{max-width:850px}
+.essentials-context{font-size:14px;line-height:1.65;color:var(--muted);margin:14px 0}
+.analysis-fold{margin-top:19px;padding-top:17px;border-top:1px solid var(--line)}
+.analysis-fold>summary{font-size:16px;line-height:1.5;font-weight:600;gap:18px}
+.fold-content{margin-top:19px}
+.essentials-world .scenario-output{margin-top:20px}
+.essentials-world .scenario-cards{gap:20px}
+.essentials-world .scenario-score-line{min-height:0}
+.essentials-world .scenario-rank{font-size:48px}
+.essentials-world .scenario-card{padding:21px 24px}
+.essentials-world .scenario-range{margin-top:13px}
+.essentials-world .scenario-delta{font-size:16px;margin:16px 0 0}
+.world-limitation{font-size:14px;line-height:1.65;color:var(--muted);margin-top:16px;max-width:930px}
+#target-editor .scenario-inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;padding:18px}
+#target-editor .scenario-value-field{margin-top:0}
+#target-editor .scenario-presets{display:none}
+#target-editor .scenario-note{grid-column:1/-1}
+#target-editor .scenario-anchor{font-size:14px;margin-top:15px;padding-top:12px}
+.essentials-world .distribution-layout{grid-template-columns:minmax(0,1fr);margin-top:18px}
+.distribution-detail{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.distribution-detail .section-head{margin-top:20px;gap:18px}
+.distribution-detail h3,.sensitivity-summary h3{font-size:20px;line-height:1.35}
+.distribution-detail .help-hint{display:none}
+.distribution-scope{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.distribution-scope label{font-size:15px;margin:0}
+.distribution-scope .select-wrap{min-width:230px}
+#explore-uncertainty>.fold-content>h3{font-size:18px;margin-bottom:10px}
+#explore-uncertainty .scenario-chart{max-height:270px}
+.sensitivity-summary{margin-top:23px;padding-top:22px;border-top:1px solid var(--line)}
+.sensitivity-summary .method-summary{font-size:15px;line-height:1.65;margin-top:8px}
+.sensitivity-summary .essentials-context{margin:8px 0 0}
+.sensitivity-summary>.analysis-fold{border:0;padding-top:0;margin-top:12px}
+#uncertainty .uncertainty-cards{margin-top:15px}
+#uncertainty .uncertainty-card h3{font-size:18px}
+#athlete-model-checks .diagnostics{margin-top:0}
+#athlete-detail .athlete-extra{margin-top:18px}
+#athlete-detail .athlete-extra>summary{font-size:14px}
+#athlete-detail .athlete-extra .athlete-info:first-child{border-top:0;margin-top:0;padding-top:0}
+.essentials-history{padding:22px 24px}
+.essentials-history .section-head{margin-bottom:0}
+.essentials-history h2{font-size:22px}
+.essentials-history .section-head p{font-size:15px;margin-top:8px}
+.supporting-info>details{padding:18px 24px;background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-top:12px}
+.supporting-info>details>summary{font-size:15px}
+#simulator [hidden],#supporting-info [hidden]{display:none!important}
+@media(max-width:1150px){.support-nav{display:none}}
+@media(max-width:760px){.essentials-world .scenario-cards{gap:10px}.essentials-world .scenario-card{padding:16px 12px}.essentials-world .scenario-rank{font-size:36px}.essentials-world .scenario-score-line{min-height:3em}.essentials-world .scenario-range{font-size:13px}.essentials-world .scenario-range b{display:block}#target-editor .scenario-inputs{grid-template-columns:minmax(0,1fr);gap:16px}.distribution-scope{align-items:stretch;flex-direction:column;gap:8px}.distribution-detail .section-head{align-items:flex-start;flex-direction:column}.essentials-history{padding:20px 17px}.supporting-info>details{padding:17px}.analysis-fold>summary{font-size:15px}.essentials-context,.world-limitation{font-size:14px}}
+
 </style>
 <aside class="sidebar" aria-label="Dashboard navigation">
 <div class="side-brand">
@@ -168,14 +220,7 @@ Sofya.
 Triathlon explorer
 </div>
 </div>
-<nav class="section-nav" aria-label="Dashboard sections"><a aria-current="location" href="#mytri-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18M3 19V5" /><circle cx="7" cy="8" r="1.5"></circle><circle cx="12" cy="11" r="1.5"></circle><circle cx="17" cy="14" r="1.5"></circle><circle cx="21" cy="15" r="1.5"></circle></svg><span>MyTriRanking
-field</span></a><a href="#estimate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V13M10 19V5M16 19V9M22 19V3" /></svg><span>Distribution</span></a><a href="#simulator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 18h16M6 15l5-5 4 2 5-8M15 4h5v5" /></svg><span>What-if
-simulator</span></a><a href="#history"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 4v16h17M6 16l5-5 4 2 5-8" /><circle cx="11" cy="11" r="2"></circle></svg><span>Progress
-over
-time</span></a><a href="#athletes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"></circle><path d="M3 20v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 4v2" /></svg><span>Athlete
-comparison</span></a><a href="#methods"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /><circle cx="9" cy="6" r="2" fill="currentColor"></circle><circle cx="16" cy="12" r="2" fill="currentColor"></circle><circle cx="11" cy="18" r="2" fill="currentColor"></circle></svg><span>Compare
-methods</span></a><a href="#uncertainty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7v1" /></svg><span>Understand
-the intervals</span></a></nav>
+<nav class="section-nav" aria-label="Dashboard sections"><a aria-current="location" href="#mytri-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18M3 19V5" /><circle cx="7" cy="8" r="1.5"></circle><circle cx="12" cy="11" r="1.5"></circle><circle cx="17" cy="14" r="1.5"></circle><circle cx="21" cy="15" r="1.5"></circle></svg><span>MyTriRanking field</span></a><a href="#simulator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 18h16M6 15l5-5 4 2 5-8M15 4h5v5" /></svg><span>World estimate</span></a><a href="#athletes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"></circle><path d="M3 20v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 4v2" /></svg><span>Athlete comparison</span></a></nav><a class="support-nav" href="#supporting-info">Saved data &amp; notes</a>
 <div class="sidebar-bottom">
 <svg class="side-art" viewBox="0 0 150 100" aria-hidden="true">
 <path fill="#c9edf1" d="M0 0h150v100H0z" /><path fill="#d82046" d="M0 0h50v50H0z" /><circle fill="#f3a0bd" cx="25" cy="25" r="17"></circle><circle fill="white" cx="25" cy="25" r="7"></circle><path fill="#f3a0bd" d="m50 0 50 50H50zm50 0 50 50h-50zM0 50h50v50H0z" /><path fill="#850e25" d="M0 50a50 50 0 0 1 50 50H0z" /><path fill="#ef658e" d="M50 50h100v50H50z" /><path fill="#f3a0bd" d="m50 100 50-50v50zm50 0 50-50v50z" />
@@ -286,33 +331,8 @@ supplied British rankings, not the worldwide MyTriRanking field; this
 section is independent of the model controls above.
 </p>
 <div class="field-next-step"><a class="button" href="#simulator">Try a target UK rank <span aria-hidden="true">→</span></a><span>See how another rank or score changes the provisional world estimate.</span></div></section>
-<div class="model-opening" id="model-settings"><h2>What could this mean for your world ranking?</h2><p>Choose the comparison data and assumptions, then explore the estimate or try a target UK rank in the simulator.</p></div><div class="actuals">
-<div class="kpi-rank">
-<span class="kpi-label">British
-rank</span><b id="actual-british"></b><small class="kpi-caption">Women ·
-middle distance</small>
-</div>
-<div class="kpi-score">
-<span class="kpi-label">Overall
-score</span><b id="actual-overall"></b><small class="kpi-caption">MyTriRanking
-points</small>
-</div>
-<div class="kpi-best">
-<span class="kpi-label">Best-race
-score</span><b id="actual-best"></b><small class="kpi-caption">MyTriRanking
-points</small>
-</div>
-<div class="kpi-cohort">
-<span class="kpi-label"><button class="stat-term" type="button" data-help="cohort" aria-haspopup="dialog" aria-label="Explain Athletes in this model">Athletes
-in this
-model</button></span><b id="overview-n"></b><small class="kpi-caption" id="overview-cohort"></small>
-</div>
-</div>
+<section class="primary-block essentials-world" id="simulator" aria-labelledby="scenario-title"><div class="section-head"><div><h2 id="scenario-title">Your possible world position</h2><p>Your recorded score and the hypothetical target from the first graph, compared using the same assumptions.</p></div></div><div id="model-settings"><div class="control-area">
 
-<div class="control-area">
-<div class="control-heading">
-<span class="eyebrow">Choose your scenario</span><span class="small">Every chart updates with your choices</span>
-</div>
 <div class="controls">
 <div class="field">
 <label for="system">Ranking system</label>
@@ -390,13 +410,94 @@ regression</option><option value="robust">Robust regression
 </div>
 </div>
 </details>
+</div></div><p id="world-assumptions" class="essentials-context"></p><details class="analysis-fold" id="target-editor"><summary>Edit target rank or score</summary><div class="fold-content"><div class="scenario-inputs">
+<div class="field">
+<label for="scenario-mode">Set your target by</label>
+<div class="select-wrap">
+<select id="scenario-mode"><option value="rank">UK middle-distance
+rank</option><option value="score">MyTriRanking overall
+score</option></select>
 </div>
-<section class="primary-block" id="estimate" aria-labelledby="distribution-title">
+</div>
+<div id="scenario-rank-field" class="field scenario-value-field">
+<label for="scenario-rank">Target UK
+rank</label><input id="scenario-rank" type="number" inputmode="numeric" min="1" step="1" value="50" aria-describedby="scenario-input-note scenario-error">
+</div>
+<div id="scenario-score-field" class="field scenario-value-field" hidden>
+<label for="scenario-score">Target overall
+score</label><input id="scenario-score" type="number" inputmode="decimal" min="0" step="0.01" value="865.94" aria-describedby="scenario-input-note scenario-error">
+</div>
+<p id="scenario-input-note" class="scenario-note">
+</p>
+<div class="scenario-presets" aria-label="Target rank shortcuts">
+<button class="button" type="button" data-target-rank="25">
+UK #25
+</button>
+<button class="button" type="button" data-target-rank="50">
+UK #50
+</button>
+<button class="button" type="button" data-target-rank="100">
+UK #100
+</button>
+<button class="button" type="button" id="scenario-current">
+Use my current rank
+</button>
+</div>
+
+</div><p id="scenario-anchor" class="scenario-anchor">
+</p></div></details><p id="scenario-error" class="scenario-error" role="status" hidden>
+</p><div id="scenario-output" class="scenario-output">
+<div class="scenario-cards" aria-live="polite" aria-atomic="true">
+<div class="scenario-card">
+<h3>
+At your recorded score
+</h3>
+<p id="scenario-baseline-input" class="scenario-score-line">
+</p>
+<strong id="scenario-baseline-rank" class="scenario-rank"></strong>
+<p class="scenario-rank-label">
+Estimated <span class="scenario-system"></span> world rank
+</p>
+<p class="scenario-range">
+95% prediction: <b id="scenario-baseline-range"></b>
+</p>
+</div>
+<div class="scenario-card scenario-target">
+<h3>
+At your target score
+</h3>
+<p id="scenario-target-input" class="scenario-score-line">
+</p>
+<strong id="scenario-target-rank" class="scenario-rank"></strong>
+<p class="scenario-rank-label">
+Estimated <span class="scenario-system"></span> world rank
+</p>
+<p class="scenario-range">
+95% prediction: <b id="scenario-target-range"></b>
+</p>
+</div>
+</div>
+<p id="scenario-delta" class="scenario-delta">
+</p>
+
+
+
+</div><p id="scenario-warning" class="notice warning" hidden>
+</p><p id="scenario-measure-note" class="scenario-note" hidden>
+</p><p class="world-limitation">These are provisional estimates within the saved ranking table. Race conditions and an incomplete season can change the outcome; this is not an official rank or evidence of pro eligibility.</p><details class="analysis-fold" id="explore-uncertainty"><summary>Explore the uncertainty</summary><div class="fold-content"><h3>Recorded score and target: interval comparison</h3><p class="mobile-hint">Scroll across to see the full range.</p><div class="scenario-chart-scroll">
+<svg id="scenario-chart" class="chart scenario-chart" viewBox="0 0 740 210" role="img" aria-labelledby="scenario-chart-desc">
+<title id="scenario-chart-desc">
+</title>
+</svg>
+</div><div class="chart-legend">
+<span class="key"><i class="swatch user"></i> Model median</span><span class="key"><i class="swatch confidence-line"></i><button type="button" class="stat-term" data-help="confidence" aria-haspopup="dialog">95%
+mean confidence</button></span><span class="key"><i class="swatch prediction-line"></i><button type="button" class="stat-term" data-help="prediction" aria-haspopup="dialog">95%
+prediction</button></span>
+</div><p id="scenario-mean-intervals" class="scenario-note">
+</p><div id="estimate" class="distribution-detail"><div class="distribution-scope"><label for="distribution-scenario">Show distribution for</label><div class="select-wrap"><select id="distribution-scenario"><option value="recorded">Your recorded score</option><option value="target">Your hypothetical target</option></select></div></div>
 <div class="section-head">
 <div>
-<h2 id="distribution-title">
-Your possible place in the field
-</h2>
+<h3 id="distribution-title">Distribution at your recorded score</h3>
 <p id="distribution-subtitle">
 </p>
 </div>
@@ -433,7 +534,7 @@ median</button></span>
 
 </div>
 </div>
-<aside class="stat-column" aria-live="polite">
+<aside hidden class="stat-column" aria-live="polite">
 <div class="stat-primary">
 <div class="stat-label">
 Provisional rank ·
@@ -471,122 +572,158 @@ Uncertainty in the fitted relationship
 </div>
 </aside>
 </div>
-<div id="estimate-note" class="notice">
+<div hidden id="estimate-note" class="notice">
 
 </div>
 <p class="fit-note" id="boundary-note">
 </p>
-</section>
-<section class="primary-block" id="simulator" aria-labelledby="scenario-title">
-<div class="section-head">
-<div>
-<h2 id="scenario-title">
-What if your UK ranking changed?
-</h2>
+</div><details class="analysis-fold" id="uncertainty"><summary>How to read these ranges</summary><div class="fold-content"><p id="range-explanation-context" class="essentials-context"></p>
+
+<div class="uncertainty-cards">
+<div class="uncertainty-card mean-card">
+<h3>
+How certain is the fitted relationship?
+</h3>
+<div id="explainer-mean" class="interval-value">
+
+</div>
+<div class="interval-caption">
+<button class="stat-term" type="button" data-help="confidence" aria-haspopup="dialog" aria-label="Explain 95% mean confidence interval">
+95% mean confidence interval
+</button>
+</div>
 <p>
-Choose a target UK rank or overall MyTriRanking score. Compare the
-world-ranking estimate with your recorded score, using the same model
-for both.
+How much the model’s fitted mean changes when we resample the comparison
+athletes.
 </p>
 </div>
-</div>
-<div class="scenario-layout">
-<div class="scenario-inputs">
-<div class="field">
-<label for="scenario-mode">Set your target by</label>
-<div class="select-wrap">
-<select id="scenario-mode"><option value="rank">UK middle-distance
-rank</option><option value="score">MyTriRanking overall
-score</option></select>
-</div>
-</div>
-<div id="scenario-rank-field" class="field scenario-value-field">
-<label for="scenario-rank">Target UK
-rank</label><input id="scenario-rank" type="number" inputmode="numeric" min="1" step="1" value="50" aria-describedby="scenario-input-note scenario-error">
-</div>
-<div id="scenario-score-field" class="field scenario-value-field" hidden>
-<label for="scenario-score">Target overall
-score</label><input id="scenario-score" type="number" inputmode="decimal" min="0" step="0.01" value="865.94" aria-describedby="scenario-input-note scenario-error">
-</div>
-<p id="scenario-input-note" class="scenario-note">
-</p>
-<div class="scenario-presets" aria-label="Target rank shortcuts">
-<button class="button" type="button" data-target-rank="25">
-UK #25
-</button>
-<button class="button" type="button" data-target-rank="50">
-UK #50
-</button>
-<button class="button" type="button" data-target-rank="100">
-UK #100
-</button>
-<button class="button" type="button" id="scenario-current">
-Use my current rank
-</button>
-</div>
-<p id="scenario-error" class="scenario-error" role="status" hidden>
-</p>
-</div>
-<div id="scenario-output" class="scenario-output">
-<div class="scenario-cards" aria-live="polite" aria-atomic="true">
-<div class="scenario-card">
+<div class="uncertainty-card prediction-card">
 <h3>
-At your recorded score
+How much might an individual vary?
 </h3>
-<p id="scenario-baseline-input" class="scenario-score-line">
-</p>
-<strong id="scenario-baseline-rank" class="scenario-rank"></strong>
-<p class="scenario-rank-label">
-Estimated <span class="scenario-system"></span> world rank
-</p>
-<p class="scenario-range">
-95% prediction: <b id="scenario-baseline-range"></b>
+<div id="explainer-prediction" class="interval-value">
+
+</div>
+<div class="interval-caption">
+<button class="stat-term" type="button" data-help="prediction" aria-haspopup="dialog" aria-label="Explain 95% prediction interval">
+95% prediction interval
+</button>
+</div>
+<p>
+Adds the variation seen between athletes. This is the more relevant
+spread for an individual estimate.
 </p>
 </div>
-<div class="scenario-card scenario-target">
+<div class="uncertainty-card outside-card">
 <h3>
-At your target score
+What sits outside both intervals?
 </h3>
-<p id="scenario-target-input" class="scenario-score-line">
-</p>
-<strong id="scenario-target-rank" class="scenario-rank"></strong>
-<p class="scenario-rank-label">
-Estimated <span class="scenario-system"></span> world rank
-</p>
-<p class="scenario-range">
-95% prediction: <b id="scenario-target-range"></b>
-</p>
+<ul>
+<li>
+Age-group versus pro race conditions
+</li>
+<li>
+Different courses and distances
+</li>
+<li>
+Who enters the ranked comparison group
+</li>
+<li>
+Whether the season assumptions hold
+</li>
+</ul>
 </div>
 </div>
-<p id="scenario-delta" class="scenario-delta">
+<p class="reading-note">
+These are exploratory model-based intervals. They are not a 95%
+probability statement about your true world rank.
 </p>
-<div class="scenario-chart-scroll">
-<svg id="scenario-chart" class="chart scenario-chart" viewBox="0 0 740 210" role="img" aria-labelledby="scenario-chart-desc">
-<title id="scenario-chart-desc">
+<div hidden class="takeaway">
+<h3>
+The provisional world estimate
+</h3>
+<p id="provisional">
+</p>
+</div>
+
+
+
+</div></details></div></details><div id="methods" class="sensitivity-summary"><h3 id="compare-title">How sensitive is the estimate?</h3><p id="method-scope" class="essentials-context"></p><p class="method-summary" id="method-summary">
+</p><details class="analysis-fold" id="compare-all-methods"><summary>Compare all methods</summary><div class="fold-content"><p class="essentials-context">Select a row to use that comparison group and method throughout the dashboard. <button class="stat-term" type="button" data-help="sensitivity" aria-haspopup="dialog">What is sensitivity analysis?</button></p>
+
+<div class="chart-legend">
+<span class="key"><i class="swatch user"></i>
+<button class="stat-term" type="button" data-help="median" aria-haspopup="dialog" aria-label="Explain Model median">Model
+median</button></span><span class="key"><i class="swatch confidence-line"></i>
+<button class="stat-term" type="button" data-help="confidence" aria-haspopup="dialog" aria-label="Explain 95% mean confidence">95%
+mean confidence</button></span><span class="key"><i class="swatch prediction-line"></i>
+<button class="stat-term" type="button" data-help="prediction" aria-haspopup="dialog" aria-label="Explain 95% prediction">95%
+prediction</button></span>
+</div>
+<p class="mobile-hint">
+Scroll across to compare the full range.
+</p>
+<div class="method-chart-wrap" tabindex="0" aria-label="Method ranges; scroll horizontally on smaller screens">
+<svg id="method-chart" class="chart method-chart" viewBox="0 0 1080 510" role="group" aria-labelledby="method-chart-desc">
+<title id="method-chart-desc">
 </title>
 </svg>
 </div>
-<div class="chart-legend">
-<span class="key"><i class="swatch user"></i> Model median</span><span class="key"><i class="swatch confidence-line"></i><button type="button" class="stat-term" data-help="confidence" aria-haspopup="dialog">95%
-mean confidence</button></span><span class="key"><i class="swatch prediction-line"></i><button type="button" class="stat-term" data-help="prediction" aria-haspopup="dialog">95%
-prediction</button></span>
-</div>
-<p id="scenario-mean-intervals" class="scenario-note">
-</p>
-</div>
-</div>
-<p id="scenario-anchor" class="scenario-anchor">
-</p>
-<p id="scenario-warning" class="notice warning" hidden>
-</p>
-<p id="scenario-context" class="scenario-note">
-</p>
-<p id="scenario-measure-note" class="scenario-note" hidden>
-</p>
-<details>
+
+<details id="exact-values">
 <summary>
-How this simulator works
+See the exact values
 </summary>
+<div class="table-wrap">
+<table id="method-table">
+<thead>
+<tr>
+<th>
+Comparison group / method
+</th>
+<th class="num">
+Athletes
+</th>
+<th class="num">
+<button class="stat-term" type="button" data-help="median" aria-haspopup="dialog" aria-label="Explain Median rank">
+Median rank
+</button>
+</th>
+<th class="num">
+<button class="stat-term" type="button" data-help="confidence" aria-haspopup="dialog" aria-label="Explain 95% mean CI">
+95% mean CI
+</button>
+</th>
+<th class="num">
+<button class="stat-term" type="button" data-help="prediction" aria-haspopup="dialog" aria-label="Explain 95% prediction interval">
+95% prediction interval
+</button>
+</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</details>
+<div class="table-action">
+<button class="button" id="download-athletes" type="button">
+Download selected athletes
+</button>
+<button class="button" id="download-models" type="button">
+Download method comparison
+</button>
+<button class="button" id="reset" type="button">
+Reset dashboard
+</button>
+<button class="button" id="print" type="button">
+Print current view
+</button>
+</div>
+</div></details></div><details class="analysis-fold" id="scenario-method-notes"><summary>How this comparison works</summary><div class="fold-content">
+
 <div class="details-content">
 <p>
 A target UK rank uses the overall score at that position in the saved
@@ -616,27 +753,78 @@ converted into scores in this first version. Your recorded results and
 saved history stay unchanged.
 </p>
 </div>
-</details>
-<div class="table-action">
+<p id="scenario-context" class="scenario-note">
+</p><div class="table-action">
 <button type="button" class="button" id="scenario-download">
 Download this comparison
 </button>
-</div>
-</section>
-<section class="primary-block" id="history" aria-labelledby="history-title">
+</div></div></details></section>
+<section class="primary-block" id="athletes" aria-labelledby="scatter-title">
 <div class="section-head">
 <div>
-<h2 id="history-title">
-Your progress, saved over time
+<h2 id="scatter-title">
+Meet the comparison athletes
 </h2>
 <p>
-Return to any download date to see the scores, comparison athletes and
-estimates saved then. Select a point to explore that day throughout the
-dashboard.
+Every dot is a person. Select one to explore her results and compare
+your scores.
 </p>
 </div>
-<span id="history-count" class="meta"></span>
+<button class="meta help-pill" type="button" id="sample-label" data-help="cohort" aria-haspopup="dialog" aria-label="Explain the comparison athletes">
+</button>
 </div>
+<div class="scatter-layout">
+<div class="chart-box">
+<svg id="scatter" class="chart" viewBox="0 0 820 450" role="group" aria-labelledby="scatter-desc">
+<title id="scatter-desc">
+</title>
+</svg>
+<div class="chart-legend">
+<span class="key"><i class="swatch"></i> Matched athlete</span><span class="key"><i class="swatch selected"></i> Selected athlete</span><span class="key"><i class="swatch band"></i>
+<button class="stat-term" type="button" data-help="band" aria-haspopup="dialog" aria-label="Explain 95% mean confidence band">95%
+mean confidence band</button></span><span class="key"><i class="swatch user"></i> Estimate at my score</span>
+</div>
+<details class="analysis-fold" id="athlete-model-checks"><summary>Model checks</summary><div class="fold-content"><div class="diagnostics">
+<div>
+<span><button class="stat-term" type="button" data-help="cohort" aria-haspopup="dialog" aria-label="Explain Matched athletes">Matched
+athletes</button></span><b id="diag-n"></b>
+</div>
+<div>
+<span><button class="stat-term" type="button" data-help="r2" aria-haspopup="dialog" aria-label="Explain Descriptive R²">Descriptive
+R²</button></span><b id="diag-r2"></b>
+</div>
+<div>
+<span><button class="stat-term" type="button" data-help="loo" aria-haspopup="dialog" aria-label="Explain Leave-one-out error">Leave-one-out
+error</button></span><b id="diag-loo"></b>
+</div>
+<div>
+<span>My score in this model</span><b id="diag-score"></b>
+</div>
+</div><p class="fit-note">
+R² describes how well the line fits these athletes. Leave-one-out error
+checks predictions when each athlete is held out. Neither validates a
+pro ranking for an age-group athlete.
+</p></div></details>
+
+<div id="scatter-tip" class="tooltip" hidden>
+
+</div>
+</div>
+<aside class="athlete" aria-label="Selected athlete">
+<div class="field">
+<label for="athlete-select">Take a closer look</label>
+<div class="select-wrap">
+<select id="athlete-select"></select>
+</div>
+</div>
+<div id="athlete-detail" aria-live="polite">
+
+</div>
+</aside>
+</div>
+</section>
+<div id="supporting-info" class="supporting-info"><section class="primary-block essentials-history" id="history" aria-labelledby="history-title"><div class="section-head"><div><h2 id="history-title">Your saved baseline</h2><p id="history-compact-note"></p></div><span id="history-count" class="meta"></span></div><div id="history-expanded" hidden>
+
 <div class="history-controls">
 <div class="field">
 <label for="history-metric">Plot over time</label>
@@ -785,238 +973,7 @@ snapshot’s available ranking dates.
 </p>
 </div>
 </details>
-</section>
-
-<section class="primary-block" id="athletes" aria-labelledby="scatter-title">
-<div class="section-head">
-<div>
-<h2 id="scatter-title">
-Meet the comparison athletes
-</h2>
-<p>
-Every dot is a person. Select one to explore her results and compare
-your scores.
-</p>
-</div>
-<button class="meta help-pill" type="button" id="sample-label" data-help="cohort" aria-haspopup="dialog" aria-label="Explain the comparison athletes">
-</button>
-</div>
-<div class="scatter-layout">
-<div class="chart-box">
-<svg id="scatter" class="chart" viewBox="0 0 820 450" role="group" aria-labelledby="scatter-desc">
-<title id="scatter-desc">
-</title>
-</svg>
-<div class="chart-legend">
-<span class="key"><i class="swatch"></i> Matched athlete</span><span class="key"><i class="swatch selected"></i> Selected athlete</span><span class="key"><i class="swatch band"></i>
-<button class="stat-term" type="button" data-help="band" aria-haspopup="dialog" aria-label="Explain 95% mean confidence band">95%
-mean confidence band</button></span><span class="key"><i class="swatch user"></i> Estimate at my score</span>
-</div>
-<div class="diagnostics">
-<div>
-<span><button class="stat-term" type="button" data-help="cohort" aria-haspopup="dialog" aria-label="Explain Matched athletes">Matched
-athletes</button></span><b id="diag-n"></b>
-</div>
-<div>
-<span><button class="stat-term" type="button" data-help="r2" aria-haspopup="dialog" aria-label="Explain Descriptive R²">Descriptive
-R²</button></span><b id="diag-r2"></b>
-</div>
-<div>
-<span><button class="stat-term" type="button" data-help="loo" aria-haspopup="dialog" aria-label="Explain Leave-one-out error">Leave-one-out
-error</button></span><b id="diag-loo"></b>
-</div>
-<div>
-<span>My score in this model</span><b id="diag-score"></b>
-</div>
-</div>
-<p class="fit-note">
-R² describes how well the line fits these athletes. Leave-one-out error
-checks predictions when each athlete is held out. Neither validates a
-pro ranking for an age-group athlete.
-</p>
-<div id="scatter-tip" class="tooltip" hidden>
-
-</div>
-</div>
-<aside class="athlete" aria-label="Selected athlete">
-<div class="field">
-<label for="athlete-select">Take a closer look</label>
-<div class="select-wrap">
-<select id="athlete-select"></select>
-</div>
-</div>
-<div id="athlete-detail" aria-live="polite">
-
-</div>
-</aside>
-</div>
-</section>
-<section class="primary-block" id="methods" aria-labelledby="compare-title">
-<div class="section-head">
-<div>
-<h2 id="compare-title">
-How sensitive is the estimate?
-</h2>
-<p>
-Compare methods on the same scale. Select any row to use it throughout
-the dashboard.
-<button class="stat-term" type="button" data-help="sensitivity" aria-haspopup="dialog" aria-label="Explain What is sensitivity analysis?">What
-is sensitivity analysis?</button>
-</p>
-</div>
-</div>
-<div class="chart-legend">
-<span class="key"><i class="swatch user"></i>
-<button class="stat-term" type="button" data-help="median" aria-haspopup="dialog" aria-label="Explain Model median">Model
-median</button></span><span class="key"><i class="swatch confidence-line"></i>
-<button class="stat-term" type="button" data-help="confidence" aria-haspopup="dialog" aria-label="Explain 95% mean confidence">95%
-mean confidence</button></span><span class="key"><i class="swatch prediction-line"></i>
-<button class="stat-term" type="button" data-help="prediction" aria-haspopup="dialog" aria-label="Explain 95% prediction">95%
-prediction</button></span>
-</div>
-<p class="mobile-hint">
-Scroll across to compare the full range.
-</p>
-<div class="method-chart-wrap" tabindex="0" aria-label="Method ranges; scroll horizontally on smaller screens">
-<svg id="method-chart" class="chart method-chart" viewBox="0 0 1080 510" role="group" aria-labelledby="method-chart-desc">
-<title id="method-chart-desc">
-</title>
-</svg>
-</div>
-<p class="method-summary" id="method-summary">
-</p>
-<details id="exact-values">
-<summary>
-See the exact values
-</summary>
-<div class="table-wrap">
-<table id="method-table">
-<thead>
-<tr>
-<th>
-Comparison group / method
-</th>
-<th class="num">
-Athletes
-</th>
-<th class="num">
-<button class="stat-term" type="button" data-help="median" aria-haspopup="dialog" aria-label="Explain Median rank">
-Median rank
-</button>
-</th>
-<th class="num">
-<button class="stat-term" type="button" data-help="confidence" aria-haspopup="dialog" aria-label="Explain 95% mean CI">
-95% mean CI
-</button>
-</th>
-<th class="num">
-<button class="stat-term" type="button" data-help="prediction" aria-haspopup="dialog" aria-label="Explain 95% prediction interval">
-95% prediction interval
-</button>
-</th>
-<th>
-</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-</div>
-</details>
-<div class="table-action">
-<button class="button" id="download-athletes" type="button">
-Download selected athletes
-</button>
-<button class="button" id="download-models" type="button">
-Download method comparison
-</button>
-<button class="button" id="reset" type="button">
-Reset dashboard
-</button>
-<button class="button" id="print" type="button">
-Print current view
-</button>
-</div>
-</section>
-<section class="primary-block" id="uncertainty" aria-labelledby="uncertainty-title">
-<div class="section-head">
-<div>
-<h2 id="uncertainty-title">
-Two intervals, two different questions
-</h2>
-<p>
-Read the wider prediction interval when thinking about your own possible
-result.
-</p>
-</div>
-</div>
-<div class="uncertainty-cards">
-<div class="uncertainty-card mean-card">
-<h3>
-How certain is the fitted relationship?
-</h3>
-<div id="explainer-mean" class="interval-value">
-
-</div>
-<div class="interval-caption">
-<button class="stat-term" type="button" data-help="confidence" aria-haspopup="dialog" aria-label="Explain 95% mean confidence interval">
-95% mean confidence interval
-</button>
-</div>
-<p>
-How much the model’s fitted mean changes when we resample the comparison
-athletes.
-</p>
-</div>
-<div class="uncertainty-card prediction-card">
-<h3>
-How much might an individual vary?
-</h3>
-<div id="explainer-prediction" class="interval-value">
-
-</div>
-<div class="interval-caption">
-<button class="stat-term" type="button" data-help="prediction" aria-haspopup="dialog" aria-label="Explain 95% prediction interval">
-95% prediction interval
-</button>
-</div>
-<p>
-Adds the variation seen between athletes. This is the more relevant
-spread for an individual estimate.
-</p>
-</div>
-<div class="uncertainty-card outside-card">
-<h3>
-What sits outside both intervals?
-</h3>
-<ul>
-<li>
-Age-group versus pro race conditions
-</li>
-<li>
-Different courses and distances
-</li>
-<li>
-Who enters the ranked comparison group
-</li>
-<li>
-Whether the season assumptions hold
-</li>
-</ul>
-</div>
-</div>
-<p class="reading-note">
-These are exploratory model-based intervals. They are not a 95%
-probability statement about your true world rank.
-</p>
-<div class="takeaway">
-<h3>
-The provisional world estimate
-</h3>
-<p id="provisional">
-</p>
-</div>
-<details>
+</div></section><details>
 <summary>
 How the statistics are calculated
 </summary>
@@ -1095,8 +1052,7 @@ documentation: confidence and prediction intervals</a> ·
 robust regression in MASS</a>
 </p>
 </div>
-</details>
-<details>
+</details><details>
 <summary>
 Data coverage and sources
 </summary>
@@ -1134,8 +1090,7 @@ historical performance data and scoring rules.
 
 </div>
 </div>
-</details>
-<details>
+</details><details>
 <summary>
 Re-knit this dashboard in RStudio
 </summary>
@@ -1158,8 +1113,38 @@ selector and other controls work offline. Packages: rmarkdown, knitr,
 MASS and jsonlite.
 </p>
 </div>
-</details>
-</section>
+</details></div><div hidden><div class="actuals">
+<div class="kpi-rank">
+<span class="kpi-label">British
+rank</span><b id="actual-british"></b><small class="kpi-caption">Women ·
+middle distance</small>
+</div>
+<div class="kpi-score">
+<span class="kpi-label">Overall
+score</span><b id="actual-overall"></b><small class="kpi-caption">MyTriRanking
+points</small>
+</div>
+<div class="kpi-best">
+<span class="kpi-label">Best-race
+score</span><b id="actual-best"></b><small class="kpi-caption">MyTriRanking
+points</small>
+</div>
+<div class="kpi-cohort">
+<span class="kpi-label"><button class="stat-term" type="button" data-help="cohort" aria-haspopup="dialog" aria-label="Explain Athletes in this model">Athletes
+in this
+model</button></span><b id="overview-n"></b><small class="kpi-caption" id="overview-cohort"></small>
+</div>
+</div></div>
+
+
+
+
+
+
+
+
+
+
 <footer class="footer">
 <span id="footer-date"></span><span>Saved snapshots · Exploratory
 estimates · Works offline</span></footer>
@@ -1273,7 +1258,7 @@ function drawScatter(m,c){const el=$('scatter');clearChart(el);const rows=D.athl
  const picker=$('athlete-select'),old=picker.value;picker.replaceChildren();[...rows].sort((a,b)=>a.name.localeCompare(b.name)).forEach(a=>{const option=document.createElement('option');option.value=a.id;option.textContent=a.name;picker.append(option)});if(!rows.some(a=>a.id===selected))selected=[...rows].sort((a,b)=>Math.abs(a[c.measure]-m.x0)-Math.abs(b[c.measure]-m.x0))[0].id;picker.value=selected;showAthlete();
 }
 function selectAthlete(id){selected=id;hideTip('scatter-tip');drawScatter(modelNow(),config());$('athlete-select').value=id;showAthlete()}
-function showAthlete(){
+function showAthleteBase(){
  const a=D.athletes.find(a=>a.id===selected),root=$('athlete-detail'),c=config();root.replaceChildren();if(!a)return;
  const node=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e};
  const heading=node('div','athlete-heading'),avatar=node('div','avatar',a.name.split(' ').map(w=>w[0]).slice(0,2).join('')),headingText=node('div');avatar.setAttribute('aria-hidden','true');headingText.append(node('h3','',a.name),node('p','subtitle','British middle-distance rank '+a.british));heading.append(avatar,headingText);root.append(heading);
@@ -1402,7 +1387,7 @@ function deltaDescription(current,baseline,kind){
  if(kind==='score')return `${Math.abs(diff).toFixed(2)} points ${diff>0?'higher':'lower'}`;
  return `${Math.abs(diff)} place${Math.abs(diff)===1?'':'s'} ${diff<0?'higher':'lower'} in the ranking`;
 }
-function renderHistory(){
+function renderHistoryBase(){
  const c=config(),m=modelNow(),s=savedSummary(D,c),picker=$('history-baseline'),previous=picker.value||designQuery.get('compare-date'),choices=snapshots.filter(d=>d.date!==D.date);
  picker.replaceChildren();if(!choices.length){const o=document.createElement('option');o.textContent='Available after the next download';o.value='';picker.append(o)}
  else{choices.forEach(d=>{const o=document.createElement('option');o.value=d.date;o.textContent=dateLong(d.date);picker.append(o)});picker.value=choices.some(d=>d.date===previous)?previous:([...(choices.filter(d=>d.date<D.date))].pop()||choices[0]).date}
@@ -1694,7 +1679,72 @@ $('field-target-rank').addEventListener('input',event=>setFieldTarget(event.targ
 $('field-target-reset').addEventListener('click',()=>setFieldTarget(D.user.british));
 $('field-show-quartiles').addEventListener('change',drawField);
 
-function renderScenario(){renderScenarioBase();syncFieldExplorer()}
+function renderScenario(){renderScenarioBase();syncFieldExplorer();syncEssentials()}
+
+// Presentation state only: saved models, draws and ranking calculations stay intact.
+function historyViewState(dates,date) {
+ const multiple=dates.length>1;
+ return {expanded:multiple,title:multiple?'Your progress, saved over time':'Baseline saved: '+dateLong(date),
+  note:multiple?'Choose a saved date to compare your scores and estimates over time.':'Your first download is saved. A timeline will appear when another download is added.'};
+}
+function renderHistory() {
+ const state=historyViewState(snapshots,D.date);
+ $('history-expanded').hidden=!state.expanded;$('history-title').textContent=state.title;$('history-compact-note').textContent=state.note;
+ renderHistoryBase();
+}
+function showAthlete() {
+ const root=$('athlete-detail'),wasOpen=!!root.querySelector('.athlete-extra')?.open;
+ showAthleteBase();
+ const info=[...root.querySelectorAll('.athlete-info')];if(!info.length)return;
+ const extra=document.createElement('details'),summary=document.createElement('summary'),body=document.createElement('div');
+ extra.className='athlete-extra';extra.open=wasOpen;summary.textContent='Race results and scoring details';body.className='details-content';
+ info.forEach(node=>body.append(node));extra.append(summary,body);root.insertBefore(extra,root.querySelector('.links'));
+}
+function essentialsDistributionContext() {
+ if(!scenarioResult)return null;
+ const target=$('distribution-scenario').value==='target';
+ return {c:scenarioResult.c,m:target?scenarioResult.targetModel:scenarioResult.m,
+  s:target?scenarioResult.targetSummary:scenarioResult.currentSummary,label:target?'Hypothetical target':'Recorded score'};
+}
+function essentialsHelpContext(trigger) {
+ if(!trigger?.closest('#simulator')||trigger.closest('#model-settings,#methods')||!scenarioResult)return null;
+ if(trigger.closest('#estimate,#uncertainty'))return essentialsDistributionContext();
+ return {m:scenarioResult.targetModel,c:scenarioResult.c,label:'Hypothetical target'};
+}
+function renderEssentialsDistribution() {
+ const current=essentialsDistributionContext();if(!current)return;
+ const {m,c,s,label}=current;
+ drawDistribution(m,c,s);
+ $('distribution-title').textContent='Distribution: '+label.toLowerCase();
+ $('distribution-subtitle').textContent=`${fmt(m.x0)} overall points · ${fieldLabel(c)} · ${cohortLabel(c.cohort)} · ${methodLabel(c.method)}`;
+ $('resample-label').textContent=m.replicates.toLocaleString()+' bootstrap refits';
+ $('explainer-mean').textContent=rangeLabel(s.meanCI,c);$('explainer-prediction').textContent=rangeLabel(s.predictionCI,c);
+ $('range-explanation-context').textContent=`These ranges describe the ${label.toLowerCase()} at ${fmt(m.x0)} overall points.`;
+ const draws=interval==='mean'?m.meanDraws:m.predictionDraws;
+ const low=draws.filter(v=>c.basis==='rank'&&v<1).length;
+ const high=draws.filter(v=>c.basis==='rank'?v>tableSize(c):rankFor(v,c)>tableSize(c)).length;
+ $('boundary-note').textContent=`${tableSize(c)} entries in the saved ${fieldLabel(c)} table; ${tableSize(c)}+ means beyond the listed field.`+(low||high?` Display limits affect ${(low/draws.length*100).toFixed(1)}% of draws above first place and ${(high/draws.length*100).toFixed(1)}% beyond the field. These draws are retained.`:'')+(m.failedFits?` ${m.failedFits} failed resamples were replaced.`:'');
+}
+function syncEssentials() {
+ const c=scenarioConfig(),m=D.models[modelKey(c)];
+ $('world-assumptions').textContent=`${fieldLabel(c)} · ${m.n} comparison athletes · ${c.basis==='performance'?c.finishes+' comparable successful scoring finishes':'comparison with published ranks'} · overall-score model`;
+ const evidence=config();
+ $('method-scope').textContent=`These method comparisons use your recorded ${evidence.measure==='best'?'best-race':'overall'} score (${fmt(D.user[evidence.measure])}), rather than the hypothetical target.`;
+ $('scenario-measure-note').textContent='The athlete chart and method comparisons use best-race scores. The two world estimates and their distributions use overall scores, matching the UK ranking graph.';
+ $('explore-uncertainty').hidden=!scenarioResult;
+ renderEssentialsDistribution();
+}
+$('distribution-scenario').addEventListener('change',renderEssentialsDistribution);
+$('explore-uncertainty').addEventListener('toggle',()=>{if($('explore-uncertainty').open)renderEssentialsDistribution()});
+function revealEssentialAnchor(hash) {
+ if(!hash||hash[0]!=='#')return;
+ let target;try{target=document.getElementById(decodeURIComponent(hash.slice(1)))}catch(error){return}
+ if(!target)return;
+ for(let node=target;node;node=node.parentElement)if(node.tagName==='DETAILS')node.open=true;
+}
+document.addEventListener('click',event=>{const a=event.target.closest('a[href^="#"]');if(a)revealEssentialAnchor(a.getAttribute('href'))});
+window.addEventListener('hashchange',()=>revealEssentialAnchor(location.hash));
+revealEssentialAnchor(location.hash);
 
 snapshots.forEach(d=>{const o=document.createElement('option');o.value=d.date;o.textContent=dateLong(d.date);$('snapshot-date').append(o)});
 $('snapshot-date').addEventListener('change',e=>selectSnapshot(e.target.value));$('latest-snapshot').addEventListener('click',()=>selectSnapshot(snapshots[snapshots.length-1].date));
@@ -1736,11 +1786,11 @@ function helpExample(key,m,c,s){
  };return examples[key];
 }
 function renderStatHelp(key){
- const entry=statHelpTerms[key],scenarioHelp=helpReturnFocus?.closest('#simulator')&&scenarioResult;
- const m=scenarioHelp?scenarioResult.targetModel:modelNow(),c=scenarioHelp?scenarioResult.c:config(),s=summarise(m,c);if(!entry)return;
+ const entry=statHelpTerms[key],scenarioHelp=essentialsHelpContext(helpReturnFocus);
+ const m=scenarioHelp?scenarioHelp.m:modelNow(),c=scenarioHelp?scenarioHelp.c:config(),s=summarise(m,c);if(!entry)return;
  $('stat-help-topic').value=key;$('stat-help-title').textContent=entry.title;$('stat-help-lead').textContent=entry.lead;
  const list=$('stat-help-steps');list.replaceChildren();entry.steps.forEach(text=>{const li=document.createElement('li');li.textContent=text;list.append(li)});
- $('stat-help-example').textContent=helpExample(key,m,c,s);$('stat-help-context').textContent=`${scenarioHelp?'Simulator target · overall score '+fmt(m.x0)+' · ':''}${fieldLabel(c)} · ${cohortLabel(c.cohort)} · ${methodLabel(c.method)}${c.basis==='performance'?' · '+c.finishes+' scoring finishes':''}`;
+ $('stat-help-example').textContent=helpExample(key,m,c,s);$('stat-help-context').textContent=`${scenarioHelp?scenarioHelp.label+' · overall score '+fmt(m.x0)+' · ':''}${fieldLabel(c)} · ${cohortLabel(c.cohort)} · ${methodLabel(c.method)}${c.basis==='performance'?' · '+c.finishes+' scoring finishes':''}`;
  $('stat-help-limit').textContent=entry.limit;const related=$('stat-help-related');related.replaceChildren();entry.related.forEach(id=>{const b=document.createElement('button');b.type='button';b.dataset.help=id;b.textContent=statHelpTerms[id].title;b.setAttribute('aria-haspopup','dialog');related.append(b)});helpDialog.scrollTop=0;
 }
 function openStatHelp(key,trigger){
